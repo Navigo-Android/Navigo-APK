@@ -147,6 +147,25 @@ ion-content {
   }
 }
 
+ion-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  height: 100%;
+}
+
+.form-wrapper {
+  margin-top: 10px;
+}
+
+
 ion-label, h2, ion-icon, .btn-before{
   color: #fff;
 }

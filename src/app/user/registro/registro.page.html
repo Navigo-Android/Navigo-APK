@@ -18,27 +18,27 @@
       <ion-card-content>
         <ion-item>
           <ion-icon name="person" class="icon-input"></ion-icon>
-          <ion-input type="text" placeholder="Nome Completo"></ion-input>
+          <ion-input [(ngModel)]="name" type="text" placeholder="Nome Completo"></ion-input>
         </ion-item>
         <ion-item>
           <ion-icon name="call-outline" class="icon-input"></ion-icon>
-          <ion-input type="number" placeholder="Número do Celular"></ion-input>
+          <ion-input [(ngModel)]="celular" type="number" placeholder="Número do Celular"></ion-input>
         </ion-item>
         <ion-item>
           <ion-icon name="mail" class="icon-input" ></ion-icon>
-          <ion-input type="text" placeholder="Email"></ion-input>
+          <ion-input [(ngModel)]="email" type="text" placeholder="Email"></ion-input>
         </ion-item>
         <!-- Campo de Senha -->
         <ion-item>
           <ion-icon name="lock-closed" class="icon-input"></ion-icon>
-          <ion-input
+          <ion-input [(ngModel)]="password"
             type="password"
             placeholder="Senha"
             [type]="isPasswordVisible ? 'text' : 'password'"
             id="senha"
             class="form-input"
           ></ion-input>
-          <img
+          <img [(ngModel)]="password"
             src="assets/img/show.png"
             class="icon_password"
             (click)="togglePasswordVisibility()"
@@ -46,7 +46,7 @@
             alt="Mostrar/Esconder Senha"
           />
         </ion-item>
-        <ion-button expand="block"> Entrar </ion-button>
+        <ion-button (click)="register()" expand="block"> Entrar </ion-button>
         <h3 class="create-acount" style="margin-top: 10px; color: #000; margin-bottom: 5px;">Já possui conta!</h3>
         <a href="user/login"><h3 class="create-acount"><strong>Clique Aqui!</strong></h3></a>
       </ion-card-content>

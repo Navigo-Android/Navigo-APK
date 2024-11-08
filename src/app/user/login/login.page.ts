@@ -1,30 +1,49 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonContent } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { ToastController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
-
-  // Propriedade para controlar a visibilidade da senha
+export class LoginPage {
+  email: string = '';
+  password: string = '';
   isPasswordVisible: boolean = false;
 
-  // Referência ao IonContent
-  @ViewChild(IonContent, { static: false }) content!: IonContent;
+  constructor(
+    private afAuth: AngularFireAuth,
+    private toastController: ToastController,
+    private loadingController: LoadingController
+  ) { }
 
-  constructor() { }
-
-  ngOnInit() { }
-
-  // Método para alternar a visibilidade da senha
   togglePasswordVisibility() {
     this.isPasswordVisible = !this.isPasswordVisible;
   }
 
-  // Método para rolar ao topo da página
-  scrollToTop() {
-    this.content.scrollToTop(500);
+  async login() {
+    const loading = await this.loadingController.create({
+      message: 'Carregando...',
+    });
+    await loading.present();
+
+    try {
+      const user = await this.afAuth.signInWithEmailAndPassword(this.email, this.password);
+      await loading.dismiss();
+      this.showToast('ESTAMOS CONECTADOS');
+    } catch (error) {
+      await loading.dismiss();
+      console.error('Erro de autenticação:', error);
+      this.showToast('NÃO ESTAMOS CONECTADOS');
+    }
+  }
+
+  async showToast(message: string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000
+    });
+    toast.present();
   }
 }
