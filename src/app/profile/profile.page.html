@@ -1,0 +1,69 @@
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+  </div>
+</ion-header> 
+
+<ion-content #content>
+  <h3>Minha Conta</h3>
+  <div class="box1">
+    <img src="assets/img/homem.png" alt="Imagem Perfil" class="img-perfil" style="max-width: 85px;"/>
+    <h4>Gustavo</h4>
+  </div>
+
+  <form action="">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" class="form-input">
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" class="form-input" [type]="isPasswordVisible ? 'text' : 'password'">
+      <img 
+        src="assets/img/show.png" 
+        class="icon_password" 
+        id="show_password" 
+        (click)="togglePasswordVisibility()"
+        [src]="isPasswordVisible ? 'assets/img/hidden.png' : 'assets/img/show.png'" 
+        alt="Mostrar/Esconder Senha">
+    </div>  
+
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input type="number" id="telefone" class="form-input">
+    </div>
+
+    <div class="btn-alert">
+      <p>Notificações:</p>
+      <div class="btn-alert-flex">
+        <img src="assets\img\notificacao.png" alt="Notificações Ativadas" class="alert-on">
+        <img src="assets/img/silencioso.png" alt="Notificações Desativadas">
+      </div>
+    </div>
+
+    <button class="send">Salvar</button>
+  </form>
+</ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/user/login">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

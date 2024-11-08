@@ -1,0 +1,228 @@
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+    <div class="menu-central">
+      <a href="/favoritos"
+        ><img src="assets/img/favorito.png" alt="Favorito" class="favorito"
+      /></a>
+    </div>
+    <a href="/profissoes"
+      ><img src="assets/img/profissao.png" alt="Perfil" class="user-pf"
+    /></a>
+    <a href="/profile"
+      ><img src="assets/img/perfil-menu.png" alt="Perfil" class="user"
+    /></a>
+  </div>
+</ion-header>
+
+<!-- Conteúdo principal da página -->
+<ion-content class="ion-padding">
+  (click)="scrollToTop()"
+
+  <div class="tittle-content">
+    <h3>JavaScript</h3>
+    <img src="assets/img/js.png" alt="Python" class="icon-python" />
+    <p>Aqui temos um guia com documentações oficiais, artigos e vídeos sobre os tópicos abordados no RoadMap!</p>
+  </div>
+
+  <ion-item button (click)="toggleContent('content1')"><!--Barra 1-->
+    <ion-label>
+      <h2>JavaScript</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content1']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content1']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/javascript?srsltid=AfmBOoq_YHNqo-Kt_r0cYX64nD_SYBR1FAICzVGax_NssJoFV-haPr6c"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.youtube.com/watch?v=WRlfwBof66s"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 1-->
+
+  <ion-item button (click)="toggleContent('content2')"><!--Barra 2-->
+    <ion-label>
+      <h2>Barra 2</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content2']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content2']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 2-->
+
+  <ion-item button (click)="toggleContent('content3')"><!--Barra 3-->
+    <ion-label>
+      <h2>Barra 3</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content3']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content3']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 3-->
+
+  <ion-item button (click)="toggleContent('content4')"><!--Barra 4-->
+    <ion-label>
+      <h2>Barra 4</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content4']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content4']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 4-->
+
+  <ion-item button (click)="toggleContent('content5')"><!--Barra 5-->
+    <ion-label>
+      <h2>Barra 5</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content5']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content5']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 5-->
+
+  <ion-item button (click)="toggleContent('content6')"><!--Barra 6-->
+    <ion-label>
+      <h2>Barra 6</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content6']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content6']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 6-->
+
+  <ion-item button (click)="toggleContent('content7')"><!--Barra 7-->
+    <ion-label>
+      <h2>Barra 7</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content7']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content7']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 7-->
+
+  <ion-item button (click)="toggleContent('content8')"><!--Barra 8-->
+    <ion-label>
+      <h2>Barra 8</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content8']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content8']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 8-->
+
+  <ion-item button (click)="toggleContent('content9')"><!--Barra 9-->
+    <ion-label>
+      <h2>Barra 9</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content9']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content9']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 9-->
+
+  <ion-item button (click)="toggleContent('content10')"><!--Barra 10-->
+    <ion-label>
+      <h2>Barra 10</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content10']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content10']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://docs.python.org/pt-br/3/tutorial/"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/python?srsltid=AfmBOoqf6M48gSzuBdM63JRzjoV4kbx2UifSYnLFkJElY1hISlqagivB"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://youtu.be/Mp0vhMDI7fA?si=ms5nBSkge0ofHQqG"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 10-->
+</ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; width: 100%">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" size="large"></ion-icon>
+      </a>
+      <!-- Segundo botão com ícone aumentado -->
+      <ion-button expand="block" (click)="scrollToTop()">
+        <ion-icon name="arrow-up-circle-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+

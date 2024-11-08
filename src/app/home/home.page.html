@@ -1,20 +1,282 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+  </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <!-- FRONT-END -->
+  <div class="conteudo-meio">
+    <!--BACK END-->
+    <div class="section">
+      <h2>Back-End</h2>
+      <br>
+      <div class="cards-container">
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Java</ion-card-title></a>
+                <img [src]="isFavorited('Java') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Java')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href="mapa/map-python"><ion-card-title>Python</ion-card-title></a>
+                <img [src]="isFavorited('Python') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Python')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>C#</ion-card-title></a>
+                <img [src]="isFavorited('C#') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('C#')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>PHP</ion-card-title></a>
+                <img [src]="isFavorited('PHP') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('PHP')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Javascript</ion-card-title></a>
+                <img [src]="isFavorited('Javascript') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Javascript')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!--MOBILE-->
+    <div class="section">
+      <br>
+      <h2>Front-End</h2>
+      <br>
+      <div class="cards-container">
+        <ion-col size="12" size-md="4" size-lg="3">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Typescript</ion-card-title></a>
+                <img [src]="isFavorited('Typescript') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Typescript')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>CSS</ion-card-title></a>
+                <img [src]="isFavorited('CSS') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('CSS')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+    </div>
+    <br>
+
+    <!--MOBILE-->
+    <br>
+    <div class="section">
+      <h2>Frameworks e Bibliotecas</h2>
+      <br>
+      <div class="cards-container">
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>React</ion-card-title></a>
+                <img [src]="isFavorited('React') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('React')" class="favorito-icon">
+              </div>
+
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Django</ion-card-title></a>
+                <img [src]="isFavorited('Django') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Django')" class="favorito-icon">
+              </div>
+
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Bootstrap</ion-card-title></a>
+                <img [src]="isFavorited('Bootstrap') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Bootstrap')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Flash</ion-card-title></a>
+                <img [src]="isFavorited('Flash') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Flash')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Vue</ion-card-title></a>
+                <img [src]="isFavorited('Vue') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Vue')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Angular</ion-card-title></a>
+                <img [src]="isFavorited('Angular') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Angular')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+    </div>
+    <br>
+    <div class="section">
+
+      <h2>Banco de Dados</h2>
+      <br>
+      <div class="cards-container">
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>MySQL</ion-card-title></a>
+                <img [src]="isFavorited('MySQL') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('MySQL')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Oracle</ion-card-title></a>
+                <img [src]="isFavorited('Oracle') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Oracle')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Firebase</ion-card-title></a>
+                <img [src]="isFavorited('Firebase') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Firebase')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>        
+      </div>
+
+
+      <h2>Outros</h2>
+      <br>
+      <div class="cards-container">
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>AI</ion-card-title></a>
+                <img [src]="isFavorited('AI') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('AI')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <a href=""><ion-card-title>Security</ion-card-title></a>
+                <img [src]="isFavorited('Security') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
+                (click)="toggleFavorite('Security')" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>        
+      </div>
+  </div>
   </div>
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+      
+          

@@ -1,0 +1,44 @@
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="conteudo-meio">
+    <div class="section">
+      <h2>Favoritos</h2>
+      <br>
+      <div class="cards-container">
+        <ion-col size="12" size-md="6" size-lg="4" *ngFor="let item of favorites">
+          <ion-card class="custom-card">
+            <ion-card-header>
+              <div class="title-icon-container">
+                <ion-card-title>{{ item }}</ion-card-title>
+                <img src="assets/img/favorito.png" alt="Remover Favorito" 
+                (click)="removeFavorite(item)" class="favorito-icon">
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

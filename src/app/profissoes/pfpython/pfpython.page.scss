@@ -1,0 +1,99 @@
+/*Ínicio do Header*/
+ion-header{
+    background-color: #2358b9;
+    border-bottom: 2px #fff solid;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 85px;
+    margin-right: 85px;
+    padding: 5px;
+}
+
+.logo{
+    max-width: 30px;
+}
+/*Fim o Header*/
+
+
+/* Estilos do Content */
+ion-content, ion-item {
+    --background: #90bffc;
+}
+
+.tittle-content {
+    display: block;
+    margin: 0 auto;
+}
+
+.tittle-content h3 {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tittle-content p {
+    text-align: justify; /* Justifica o texto */
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 45px;
+}
+
+.icon-js {
+    display: block;
+    margin: 0 auto;
+    max-width: 45px;
+}
+
+.text-intro {
+    text-align: justify; /* Justifica o texto */
+    text-align-last: center; /* Centraliza a última linha */
+    word-spacing: 2px; /* Aumenta o espaçamento entre palavras */
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.pf-box {
+    text-align: center;
+    font-size: 17px;
+}
+
+.text-info {
+    text-align: justify; /* Justifica o texto */
+    font-size: 0.9rem;
+    margin-bottom: 10px; /* Espaço adicional entre os textos */
+}
+
+.salario {
+    text-align: center;
+    font-size: 0.8rem;    
+}
+
+ion-label, h2, ion-icon, .btn-before{
+    color: #fff;
+  }
+  
+  .justify-icon {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Define um espaço (gap) entre as imagens */
+  }
+  
+  .icon-artigos {
+    max-width: 30px; /* Ajuste o tamanho das imagens conforme necessário */
+  }
+
+  a, .icon-tabs {
+    font-size: 40px; /* Ajuste o tamanho conforme necessário */
+    width: 30px; /* Opcional: Ajuste a largura do contêiner */
+  }
+
+  
+  ion-footer, ion-toolbar{
+    --background: #2358b9;
+    border-top: 1px #fff solid;
+  }

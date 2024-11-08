@@ -1,0 +1,101 @@
+
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+  </div>
+</ion-header>  
+
+<ion-content>
+  <div id="header">
+    <h1><strong>Registre-se</strong></h1>
+    <p>Faça seu resgistro e fique por dentro das novidades da programação</p>
+  </div>
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name="person" class="icon-input"></ion-icon>
+          <ion-input type="text" placeholder="Nome Completo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call-outline" class="icon-input"></ion-icon>
+          <ion-input type="number" placeholder="Número do Celular"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail" class="icon-input" ></ion-icon>
+          <ion-input type="text" placeholder="Email"></ion-input>
+        </ion-item>
+        <!-- Campo de Senha -->
+        <ion-item>
+          <ion-icon name="lock-closed" class="icon-input"></ion-icon>
+          <ion-input
+            type="password"
+            placeholder="Senha"
+            [type]="isPasswordVisible ? 'text' : 'password'"
+            id="senha"
+            class="form-input"
+          ></ion-input>
+          <img
+            src="assets/img/show.png"
+            class="icon_password"
+            (click)="togglePasswordVisibility()"
+            [src]="isPasswordVisible ? 'assets/img/hidden.png' : 'assets/img/show.png'"
+            alt="Mostrar/Esconder Senha"
+          />
+        </ion-item>
+        <ion-button expand="block"> Entrar </ion-button>
+        <h3 class="create-acount" style="margin-top: 10px; color: #000; margin-bottom: 5px;">Já possui conta!</h3>
+        <a href="user/login"><h3 class="create-acount"><strong>Clique Aqui!</strong></h3></a>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="line-text">
+      <span class="line"></span>
+      <span class="text">Redes Sociais</span>
+    </div>
+
+    <ion-card class="social-weapper">
+      <ion-card-content>
+        <div class="sociais">
+          <ion-button class="btn-fb">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-tw">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-go">
+            <ion-icon name="logo-google"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-ph">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-button>
+
+        </div>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+</ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/user/login">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

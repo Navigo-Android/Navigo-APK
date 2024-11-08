@@ -1,0 +1,189 @@
+/*Ínicio do Header*/
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #2358b9;
+  border-bottom: 2px #fff solid;
+}
+
+.logo{
+  max-width: 35px;
+}
+/*Fim o Header*/
+
+.section {
+  text-align: center;
+  margin: 20px 0;
+  color: white;
+}
+
+.section, h2{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+.texto-inicial {
+  padding: 25px;
+}
+
+.inicio {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 90%;
+
+}
+
+
+ion-content{
+  --background: #90bffc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-card {
+  background-color: white;
+  color: #000;
+  text-align: center;
+  border-radius: 25px;
+  height: auto;
+  width: 65%;
+  max-width: 200px;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.custom-card:hover {
+  box-shadow: 0 6px 12px black;
+  cursor: pointer;
+}
+
+ion-col {
+  flex: 5 5 100px;
+  /* Faz com que os cards se ajustem para caber no espaço disponível */
+  max-width: 200px;
+  /* Define a largura máxima dos cards */
+  margin: 0;
+  /* Remove margens adicionais */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 600px) {
+  ion-card-title {
+      font-size: 8px;
+      /* Reduz o tamanho da fonte para dispositivos móveis */
+  }
+
+  .custom-card {
+      padding: 10px;
+      /* Ajusta o padding do card */
+  }
+}
+
+
+.custom-card ion-card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+ion-grid {
+  --ion-grid-padding: 0;
+}
+
+/* linha */
+.custom-hr {
+  border: 0;
+  height: 2px;
+  background: black;
+  width: 100%;
+  margin: 20px auto;
+
+}
+
+/*icone */
+.title-icon-container, a {
+  display: flex;
+  align-items: center;
+  /* Garante alinhamento vertical entre o ícone e o texto */
+  justify-content: flex-start;
+  /* Mantém ambos os itens próximos ao início (lado esquerdo) */
+}
+.title-icon-container > img{
+  max-width: 25px;
+  position: absolute;
+  left: 150px;
+
+}
+
+ion-card-title {
+  margin-right: 30px;
+  /* Espaço entre o título e o ícone */
+  font-size: 20px;
+  /* Tamanho do título */
+}
+
+ion-icon {
+  font-size: 24px;
+  /* Aumenta o tamanho do ícone */
+  cursor: pointer;
+  /* Aplica um ponteiro para indicar que o ícone é clicável */
+}
+
+.favorited {
+  color: red;
+  /* O ícone de coração ficará vermelho quando for favoritado */
+}
+
+
+
+ion-label, h2, ion-icon, .btn-before{
+  color: #fff;
+}
+
+.justify-icon {
+  display: flex;
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 20px; /* Define um espaço (gap) entre as imagens */
+}
+
+.icon-artigos {
+  max-width: 30px; /* Ajuste o tamanho das imagens conforme necessário */
+}
+
+a, .icon-tabs {
+  font-size: 40px; /* Ajuste o tamanho conforme necessário */
+  width: 30px; /* Opcional: Ajuste a largura do contêiner */
+}
+
+
+ion-footer, ion-toolbar{
+  --background: #2358b9;
+  border-top: 1px #fff solid;
+}

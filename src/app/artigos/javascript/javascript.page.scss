@@ -1,0 +1,82 @@
+/*Ínicio do Header*/
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #000;
+    border-bottom: 2px #fff solid;
+}
+
+.menu-central {
+    max-width: 30px;
+}
+
+
+.logo, .user-pf{
+    max-width: 35px;
+}
+
+.logo,.user {
+    max-width: 25px;
+}
+
+.btn-back{
+    max-width: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+}/*Fim o Header*/
+
+ion-content, ion-item{/*Ínicio do Content*/
+    --background: #000000;
+}
+
+.tittle-content{
+    display: block;
+    margin: 0 auto;
+}
+
+.tittle-content h3{
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-justify: none;
+}
+
+.tittle-content p {
+    text-align: center;
+    color: #fff;
+    font-size: 0.8 rem;
+    margin-bottom: 45px;
+}
+
+.icon-python{
+    display: block;
+    margin:  0 auto;
+    max-width: 45px;
+}
+
+
+ion-label, h2, ion-icon, .btn-before{
+    color: #fff;
+}
+
+.chevron-up {
+    transform: rotate(180deg);
+}
+
+.justify-icon {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Define um espaço (gap) entre as imagens */
+  }
+  
+  .icon-artigos {
+    max-width: 30px; /* Ajuste o tamanho das imagens conforme necessário */
+  }
+  
+ion-footer, ion-toolbar{
+    --background: #000000;
+}
+
+

@@ -1,0 +1,81 @@
+/*Ínicio do Header*/
+ion-header{
+    background-color: #2358b9;
+    border-bottom: 2px #fff solid;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 85px;
+    margin-right: 85px;
+    padding: 5px;
+}
+
+.logo{
+    max-width: 30px;
+}
+
+.user-pf{
+    max-width: 35px;
+}
+/*Fim o Header*/
+
+ion-content, ion-item{/*Ínicio do Content*/
+    --background: #90bffc;
+}
+
+.tittle-content{
+    display: block;
+    margin: 0 auto;
+}
+
+.tittle-content h3{
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-justify: none;
+}
+
+.tittle-content p {
+    text-align: center;
+    color: #fff;
+    font-size: 0.8 rem;
+    margin-bottom: 45px;
+}
+
+.icon-python{
+    display: block;
+    margin:  0 auto;
+    max-width: 45px;
+}
+
+
+ion-label, h2, ion-icon, .btn-before{
+    color: #fff;
+  }
+  
+  .justify-icon {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Define um espaço (gap) entre as imagens */
+  }
+  
+  .icon-artigos {
+    max-width: 30px; /* Ajuste o tamanho das imagens conforme necessário */
+  }
+
+  a, .icon-tabs {
+    font-size: 40px; /* Ajuste o tamanho conforme necessário */
+    width: 30px; /* Opcional: Ajuste a largura do contêiner */
+  }
+
+  
+  ion-footer, ion-toolbar{
+    --background: #2358b9;
+    border-top: 1px #fff solid;
+  }
+
+
