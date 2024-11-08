@@ -1,0 +1,7 @@
+{
+  "name": "Navigo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
