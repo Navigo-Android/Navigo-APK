@@ -16,7 +16,7 @@
         <!-- Campo de Email -->
         <ion-item>
           <ion-icon name="mail" class="icon-input"></ion-icon>
-          <ion-input type="text" placeholder="Email"></ion-input>
+          <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
         </ion-item>
 
         <!-- Campo de Senha -->
@@ -26,6 +26,7 @@
             type="password"
             placeholder="Senha"
             [type]="isPasswordVisible ? 'text' : 'password'"
+            [(ngModel)]="password"
             id="senha"
             class="form-input"
           ></ion-input>
@@ -39,7 +40,7 @@
         </ion-item>
 
         <!-- Botão de Login -->
-        <ion-button expand="block">Entrar</ion-button>
+        <ion-button expand="block" (click)="login()">Entrar</ion-button>
         <h3 class="create-acount" style="margin-top: 10px; color: #000; margin-bottom: 5px;">Esqueceu sua senha?</h3>
         <a href="user/reset-senha"><h3 class="create-acount"><strong>Clique Aqui!</strong></h3></a>
         <a href="user/registro"><h3 class="create-acount" style="margin-top: 10px;"><strong>Criar conta!</strong></h3></a>

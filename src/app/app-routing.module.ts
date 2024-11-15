@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+    canActivate: [AuthGuard] 
   },
   {
     path: '',
@@ -13,31 +16,38 @@ const routes: Routes = [
   },
   {
     path: 'artigos/python',
-    loadChildren: () => import('./artigos/python/python.module').then(m => m.PythonPageModule)
+    loadChildren: () => import('./artigos/python/python.module').then(m => m.PythonPageModule),
+    canActivate: [AuthGuard] 
   },
   {
     path: 'artigos/java',
-    loadChildren: () => import('./artigos/java/java.module').then(m => m.JavaPageModule)
+    loadChildren: () => import('./artigos/java/java.module').then(m => m.JavaPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'artigos/javascript',
-    loadChildren: () => import('./artigos/javascript/javascript.module').then(m => m.JavaScriptPageModule)
+    loadChildren: () => import('./artigos/javascript/javascript.module').then(m => m.JavaScriptPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule)
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'mapa/map-python',
-    loadChildren: () => import('./mapa/map-python/map-python.module').then(m => m.MapPythonPageModule)
+    loadChildren: () => import('./mapa/map-python/map-python.module').then(m => m.MapPythonPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'favoritos',
-    loadChildren: () => import('./favoritos/favoritos.module').then(m => m.FavoritosPageModule)
+    loadChildren: () => import('./favoritos/favoritos.module').then(m => m.FavoritosPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'profissoes/pfpython',
-    loadChildren: () => import('./profissoes/pfpython/pfpython.module').then(m => m.PfpythonPageModule)
+    loadChildren: () => import('./profissoes/pfpython/pfpython.module').then(m => m.PfpythonPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'user/login',
@@ -238,9 +248,13 @@ const routes: Routes = [
   {
     path: 'pfsecurity',
     loadChildren: () => import('./profissoes/pfsecurity/pfsecurity.module').then( m => m.PfsecurityPageModule)
-  }
+  },
+  {
+    path: '**',
+    redirectTo: 'user/login', // Redireciona rotas inválidas para login
+  },
 
-    
+
 ];
 
 @NgModule({
