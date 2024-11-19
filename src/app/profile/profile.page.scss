@@ -101,6 +101,12 @@ form {/*Ínicio do Formulario*/
     margin-bottom: 30px;
 }
 
+.btns{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
 .send {
     background-color: #007bff; /* Cor do botão */
     color: white; /* Cor do texto do botão */
@@ -114,6 +120,18 @@ form {/*Ínicio do Formulario*/
     width: 50%; /* O botão ocupa toda a largura */
     display: block;/*Centraliza junto com o margin*/
     margin: 0 auto;/*Centraliza junto com o display block*/
+}
+
+.logout{
+    width: 50%; /* O botão ocupa toda a largura */
+    display: block;/*Centraliza junto com o margin*/
+    margin: 0 auto;/*Centraliza junto com o display block*/
+    background-color: #df0e0e; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 7px; 
+    font-size: 0.8rem; 
+    border-radius: 4px; 
+    text-transform: uppercase; 
 }
 
 ion-label, h2, ion-icon{
@@ -131,8 +149,8 @@ ion-label, h2, ion-icon{
   }
   
   a, .icon-tabs {
-    font-size: 40px; /* Ajuste o tamanho conforme necessário */
-    width: 30px; /* Opcional: Ajuste a largura do contêiner */
+    font-size: 25px; /* Ajuste o tamanho conforme necessário */
+    width: 25px; /* Opcional: Ajuste a largura do contêiner */
   }
   
   

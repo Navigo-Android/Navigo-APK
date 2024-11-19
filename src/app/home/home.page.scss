@@ -31,6 +31,10 @@ h1 {
     padding: 25px;
 }
 
+.title-icon-container, a {
+    text-decoration: none;
+}
+
 .inicio {
     color: white;
     text-align: center;
@@ -128,18 +132,22 @@ ion-grid {
 }
 
 /*icone */
-.title-icon-container, a {
+.title-icon-container, a, .favorito-icon, .logo-map {
     display: flex;
     align-items: center;
     /* Garante alinhamento vertical entre o ícone e o texto */
-    justify-content: flex-start;
+    justify-content: space-between;
     /* Mantém ambos os itens próximos ao início (lado esquerdo) */
 }
-.title-icon-container > img{
+.title-icon-container > .favorito-icon{
     max-width: 25px;
     position: absolute;
     left: 150px;
 
+}
+
+.logo-map{
+    max-width: 25px;
 }
 
 ion-card-title {
@@ -178,8 +186,8 @@ ion-label, h2, ion-icon, .btn-before{
   }
   
   a, .icon-tabs {
-    font-size: 40px; /* Ajuste o tamanho conforme necessário */
-    width: 30px; /* Opcional: Ajuste a largura do contêiner */
+    font-size: 25px; /* Ajuste o tamanho conforme necessário */
+    width: 25px; /* Opcional: Ajuste a largura do contêiner */
   }
   
   
