@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: #2358b9;
+  background: #023E8A;
   border-bottom: 2px #fff solid;
 }
 
@@ -41,7 +41,7 @@ h1 {
 
 
 ion-content{
-  --background: #90bffc;
+  --background: #0077B6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,12 +178,12 @@ ion-label, h2, ion-icon, .btn-before{
 }
 
 a, .icon-tabs {
-  font-size: 40px; /* Ajuste o tamanho conforme necessário */
-  width: 30px; /* Opcional: Ajuste a largura do contêiner */
+  font-size: 25px; /* Ajuste o tamanho conforme necessário */
+  width: 25px; /* Opcional: Ajuste a largura do contêiner */
 }
 
 
 ion-footer, ion-toolbar{
-  --background: #2358b9;
+  --background: #023E8A;
   border-top: 1px #fff solid;
 }

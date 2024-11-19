@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background: #2358b9;
+    background: #023E8A;
     border-bottom: 2px #fff solid;
   }
   
@@ -14,7 +14,7 @@
 
 
 ion-content, ion-item{/*Ínicio do Content*/
-    --background: #90bffc;
+    --background: #0077B6;
     
 }
 
@@ -43,7 +43,7 @@ form {/*Ínicio do Formulario*/
     max-width: 350px; 
     margin: 0 auto; 
     padding: 20px; 
-    background-color: #90bffc; 
+    background-color: #0077B6; 
 }
 
 .form-group {
@@ -59,21 +59,22 @@ form {/*Ínicio do Formulario*/
 }
 
 .form-group input{
-    width: 80%; /* O input ocupa toda a largura disponível */
+    width: 65%; /* O input ocupa toda a largura disponível */
     padding: 10px; 
     border: 1px solid #ccc; /* Borda cinza clara */
     border-radius: 4px; 
     font-size: 1rem; 
     display: block;/*Centraliza junto com o margin*/
     margin: 0 auto;/*Centraliza junto com o display block*/
-    box-sizing: border-box; /* Garante que padding e border não afetem a largura */
+    box-sizing: border-box;
+    text-align: center;
 }
 
 
 .icon_password{
     max-width: 25px;
     position: absolute;
-    right: 70px;
+    right: 85px;
     top: 327px;
     cursor: pointer;
 }
@@ -108,8 +109,8 @@ form {/*Ínicio do Formulario*/
     gap: 20px;
 }
 .send {
-    background-color: #007bff; /* Cor do botão */
-    color: white; /* Cor do texto do botão */
+    background-color: #00caee;
+    color: white; 
     padding: 7px; 
     font-size: 0.8rem; 
     border-radius: 4px; 
@@ -117,17 +118,17 @@ form {/*Ínicio do Formulario*/
 }
 
 .send {
-    width: 50%; /* O botão ocupa toda a largura */
-    display: block;/*Centraliza junto com o margin*/
-    margin: 0 auto;/*Centraliza junto com o display block*/
+    width: 50%; 
+    display: block;
+    margin: 0 auto;
 }
 
 .logout{
-    width: 50%; /* O botão ocupa toda a largura */
-    display: block;/*Centraliza junto com o margin*/
-    margin: 0 auto;/*Centraliza junto com o display block*/
-    background-color: #df0e0e; /* Cor do botão */
-    color: white; /* Cor do texto do botão */
+    width: 50%; 
+    display: block;
+    margin: 0 auto;
+    background-color: #df0e0e; 
+    color: white; 
     padding: 7px; 
     font-size: 0.8rem; 
     border-radius: 4px; 
@@ -155,6 +156,6 @@ ion-label, h2, ion-icon{
   
   
   ion-footer, ion-toolbar{
-    --background: #2358b9;
+    --background: #023E8A;
     border-top: 1px #fff solid;
   }

@@ -21,8 +21,17 @@
         </ion-item>
         <ion-item>
           <ion-icon name="call-outline" class="icon-input"></ion-icon>
-          <ion-input [(ngModel)]="celular" name="celular" type="number" placeholder="Número do Celular"></ion-input>
+          <ion-input 
+            [(ngModel)]="celular" 
+            name="celular" 
+            id="telefone" 
+            type="text" 
+            maxlength="15" 
+            placeholder="(XX) XXXXX-XXXX" 
+            (input)="formatTelefone()">
+          </ion-input>
         </ion-item>
+        
         <ion-item>
           <ion-icon name="mail" class="icon-input"></ion-icon>
           <ion-input [(ngModel)]="email" name="email" type="text" placeholder="Email"></ion-input>

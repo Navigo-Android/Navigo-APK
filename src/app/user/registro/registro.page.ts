@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, NavController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AngularFirestore } from '@angular/fire/compat/firestore'; // Importa o Firestore
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ToastController, LoadingController } from '@ionic/angular';
 
 
@@ -11,6 +11,7 @@ import { ToastController, LoadingController } from '@ionic/angular';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage implements OnInit {
+  user: { telefone: string } = { telefone: '' }; 
   email: string = '';
   password: string = '';
   name: string = '';
@@ -87,4 +88,26 @@ export class RegistroPage implements OnInit {
     });
     toast.present();
   }
+
+  formatTelefone() {
+    if (this.celular) {
+      // Remove todos os caracteres não numéricos
+      let telefone = this.celular.replace(/\D/g, '');
+  
+      // Aplica a formatação
+      if (telefone.length > 10) {
+        telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+      } else if (telefone.length > 6) {
+        telefone = telefone.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+      } else if (telefone.length > 2) {
+        telefone = telefone.replace(/^(\d{2})(\d{0,4}).*/, '($1) $2');
+      } else {
+        telefone = telefone.replace(/^(\d{0,2}).*/, '($1');
+      }
+  
+      // Atualiza o valor formatado
+      this.celular = telefone;
+    }
+  }
+  
 }

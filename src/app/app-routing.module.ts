@@ -95,7 +95,7 @@ const routes: Routes = [
   },
   {
     path: 'map-flash',
-    loadChildren: () => import('./mapa/map-flash/map-flash.module').then( m => m.MapFlashPageModule)
+    loadChildren: () => import('./mapa/map-flask/map-flash.module').then( m => m.MapFlashPageModule)
   },
   {
     path: 'map-vue',
