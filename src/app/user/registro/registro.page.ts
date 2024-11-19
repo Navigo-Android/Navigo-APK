@@ -48,11 +48,12 @@ export class RegistroPage implements OnInit {
       await loading.dismiss();
       this.showToast('Cadastro realizado com sucesso!');
   
-      // Salva o usuário no Firestore (caso você já tenha implementado esse código)
+      // Salva o usuário no Firestore
       await this.firestore.collection('users').doc(user.user?.uid).set({
         name: this.name,
         email: this.email,
-        celular: this.celular
+        celular: this.celular,
+        password: this.password
       });
   
       // Redireciona para a página de login após o registro
