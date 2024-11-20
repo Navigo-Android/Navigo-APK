@@ -3,7 +3,8 @@ import { IonContent, NavController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ToastController, LoadingController } from '@ionic/angular';
-
+import firebase from 'firebase/compat/app';  // Import correto do Firebase
+import 'firebase/compat/auth';
 
 @Component({
   selector: 'app-registro',
@@ -65,7 +66,6 @@ export class RegistroPage implements OnInit {
       this.showToast('Erro ao cadastrar: ' + (error.message || 'Erro desconhecido'));
     }
   }
-  
 
   private async saveUserData(userId: string | undefined) {
     if (userId) {
@@ -81,10 +81,43 @@ export class RegistroPage implements OnInit {
     }
   }
 
+  async signInWithGoogle() {
+    const loading = await this.loadingController.create({
+      message: 'Entrando com Google...',
+    });
+    await loading.present();
+
+    try {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      const credential = await this.afAuth.signInWithPopup(provider);
+
+      // Salva os dados do usuário no Firestore
+      const user = credential.user;
+      if (user) {
+        await this.firestore.collection('users').doc(user.uid).set({
+          name: user.displayName || 'Usuário Google',
+          email: user.email,
+          celular: '',
+          createdACC: new Date(),
+        });
+      }
+
+      // Redireciona após o login bem-sucedido
+      await loading.dismiss();
+      this.showToast('Registro com Google realizado com sucesso!');
+      this.navCtrl.navigateForward('/home');
+    } catch (error) {
+      await loading.dismiss();
+      const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
+      console.error('Erro ao registrar com Google:', error);
+      this.showToast('Erro ao registrar com Google: ' + errorMessage);
+    }
+  }
+
   async showToast(message: string) {
     const toast = await this.toastController.create({
       message,
-      duration: 2000
+      duration: 5000
     });
     toast.present();
   }
@@ -109,5 +142,4 @@ export class RegistroPage implements OnInit {
       this.celular = telefone;
     }
   }
-  
 }

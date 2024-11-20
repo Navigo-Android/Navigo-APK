@@ -52,32 +52,45 @@ form {/*Ínicio do Formulario*/
 
 .form-group label {
     display: block; 
-    font-weight: bold; /*Texto do label em negrito*/
+    font-weight: bold;
     margin-bottom: 8px; 
     color: #fff; 
     text-align: center;
 }
 
 .form-group input{
-    width: 65%; /* O input ocupa toda a largura disponível */
+    width: 65%; 
     padding: 10px; 
-    border: 1px solid #ccc; /* Borda cinza clara */
+    border: 1px solid #ccc;
     border-radius: 4px; 
     font-size: 1rem; 
-    display: block;/*Centraliza junto com o margin*/
-    margin: 0 auto;/*Centraliza junto com o display block*/
+    display: block;
+    margin: 0 auto;
     box-sizing: border-box;
     text-align: center;
 }
 
-
-.icon_password{
-    max-width: 25px;
-    position: absolute;
-    right: 85px;
-    top: 327px;
-    cursor: pointer;
+.input-group {
+    display: flex;
+    align-items: center; 
+    position: relative;
+    width: 100%;
 }
+  
+  .input-group input {
+    width: 65%;
+    padding-right: 40px; 
+    box-sizing: border-box; 
+  }
+  
+  .icon_password {
+    position: absolute;
+    right: 20%; 
+    cursor: pointer;
+    max-width: 20px; 
+  }
+  
+  
 
 .btn-alert p{
     text-align: center;
@@ -141,17 +154,17 @@ ion-label, h2, ion-icon{
   
   .justify-icon {
     display: flex;
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    gap: 20px; /* Define um espaço (gap) entre as imagens */
+    justify-content: center;
+    gap: 20px; 
   }
   
   .icon-artigos {
-    max-width: 30px; /* Ajuste o tamanho das imagens conforme necessário */
+    max-width: 30px;
   }
   
   a, .icon-tabs {
-    font-size: 25px; /* Ajuste o tamanho conforme necessário */
-    width: 25px; /* Opcional: Ajuste a largura do contêiner */
+    font-size: 25px; 
+    width: 25px; 
   }
   
   

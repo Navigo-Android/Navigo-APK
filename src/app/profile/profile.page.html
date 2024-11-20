@@ -9,8 +9,7 @@
 <ion-content #content>
   <h3>Minha Conta</h3>
   <div class="box1">
-    <img src="assets/img/homem.png" alt="Imagem Perfil" class="img-perfil" style="max-width: 85px;"/>
-    <h4>{{ user?.name }}</h4>
+    <h4>Bem vindo<br>{{ user?.name }}</h4>
   </div>
 
   <form (ngSubmit)="updateProfile()">
@@ -21,22 +20,24 @@
 
     <div class="form-group">
       <label for="senha">Senha:</label>
-      <input 
-        type="password" 
-        id="senha" 
-        class="form-input" 
-        [type]="isPasswordVisible ? 'text' : 'password'" 
-        [(ngModel)]="user.password" 
-        name="password"
-      >
-      <img 
-        src="assets/img/show.png" 
-        class="icon_password" 
-        id="show_password" 
-        (click)="togglePasswordVisibility()"
-        [src]="isPasswordVisible ? 'assets/img/hidden.png' : 'assets/img/show.png'" 
-        alt="Mostrar/Esconder Senha">
-    </div>  
+      <div class="input-group">
+        <input 
+          type="password" 
+          id="senha" 
+          class="form-input" 
+          [type]="isPasswordVisible ? 'text' : 'password'" 
+          [(ngModel)]="user.password" 
+          name="password">
+        <img 
+          src="assets/img/show.png" 
+          class="icon_password" 
+          id="show_password" 
+          (click)="togglePasswordVisibility()"
+          [src]="isPasswordVisible ? 'assets/img/hidden.png' : 'assets/img/show.png'" 
+          alt="Mostrar/Esconder Senha">
+      </div>
+    </div>
+     
 
     <div class="form-group">
       <label for="telefone">Telefone:</label>

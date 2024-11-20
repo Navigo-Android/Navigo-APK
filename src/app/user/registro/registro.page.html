@@ -10,7 +10,7 @@
 <ion-content>
   <div id="header">
     <h1><strong>Registre-se</strong></h1>
-    <p>Faça seu resgistro e fique por dentro das novidades de tecnologia e suas ferramentas de programação!</p>
+    <p>Faça seu resgistro e fique por dentro das novidades de tecnologia!</p>
   </div>
 
   <div class="wrapper">
@@ -58,33 +58,12 @@
       </form>
 
   
-  
-
-    <div class="line-text">
-      <span class="line"></span>
-      <span class="text">Redes Sociais</span>
-    </div>
-
-    <ion-card class="social-weapper">
-      <ion-card-content>
-        <div class="sociais">
-          <ion-button class="btn-fb">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </ion-button>
-          <ion-button class="btn-tw">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </ion-button>
-          <ion-button class="btn-go">
-            <ion-icon name="logo-google"></ion-icon>
-          </ion-button>
-          <ion-button class="btn-ph">
-            <ion-icon name="call-outline"></ion-icon>
-          </ion-button>
-
-        </div>
-      </ion-card-content>
-
-    </ion-card>
+      <div class="sociais">
+        <h3 class="text"><Strong>Crie sua conta com o Google!</Strong></h3>
+        <ion-button class="btn-go" (click)="signInWithGoogle()">
+          <img src="assets/img/google.png" alt="Google ícone">
+        </ion-button>          
+      </div>  
   </div>
 </ion-content>
 
