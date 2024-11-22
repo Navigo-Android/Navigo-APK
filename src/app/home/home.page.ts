@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
-  templateUrl: '/home.page.html',
-  styleUrls: ['/home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  @ViewChild('content', { static: false }) content!: IonContent; // Referência ao ion-content
   favorites: string[] = []; // Lista de favoritos
   items = ['Angular', 'React', 'Vue']; // Lista de itens
 
@@ -32,5 +34,9 @@ export class HomePage implements OnInit {
 
   isFavorited(item: string): boolean {
     return this.favorites.includes(item); // Verifica se está nos favoritos
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(500); // Rola ao topo com animação
   }
 }

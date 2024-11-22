@@ -6,16 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://api.exemplo.com'; // URL da sua API
-
+  private apiUrl = 'https://api.exemplo.com'; 
   constructor(private http: HttpClient) {}
 
-  // Exemplo de método para obter dados
+
   getData(endpoint: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${endpoint}`);
   }
 
-  // Exemplo de método para enviar dados
+
   postData(endpoint: string, data: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/${endpoint}`, data);
   }
