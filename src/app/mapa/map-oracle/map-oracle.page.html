@@ -1,13 +1,74 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-oracle</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pforacle"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/oracle"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-oracle</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Oracle</h1>
+  <div class="icon-container" id="icon01">
+    <img class="py-icon" src="assets/img/oracle.png" alt="oracle icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-oracle.png" alt="Mapa oracle" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>Oracle</strong> é um sistema de gerenciamento de banco de dados relacional (SGBD) amplamente utilizado para armazenar e gerenciar dados em sistemas corporativos e aplicações empresariais de grande escala. Criado pela Oracle Corporation, o Oracle Database é conhecido por sua alta performance, robustez e suporte a transações complexas. Ele oferece uma plataforma altamente escalável e segura, com suporte a múltiplos modelos de dados, incluindo dados relacionais, XML e NoSQL, e é um dos bancos de dados mais populares para empresas de grande porte.
+      <br /><br />
+
+      <strong>Por que Oracle?</strong><br /><br />
+
+      <strong>Desempenho:</strong> Oracle é projetado para fornecer desempenho excepcional em cargas de trabalho de alto volume e transações complexas. Ele usa técnicas avançadas de otimização de consultas, gerenciamento de memória e paralelismo para garantir alta performance, mesmo em ambientes de grandes dimensões.
+      <br /><br />
+
+      <strong>Escalabilidade:</strong> Oracle oferece alta escalabilidade, permitindo que empresas gerenciem grandes volumes de dados e transações com facilidade. Ele suporta clustering, particionamento de dados e replicação, garantindo que os sistemas possam crescer conforme necessário.
+      <br /><br />
+
+      <strong>Segurança:</strong> Oracle é reconhecido por sua forte segurança, oferecendo recursos como criptografia de dados em repouso e em trânsito, autenticação avançada, controle de acesso granular e auditoria detalhada. Ele ajuda as empresas a protegerem dados sensíveis e a atenderem requisitos de conformidade regulatória.
+      <br /><br />
+
+      <strong>Alta Disponibilidade:</strong> O Oracle Database possui recursos robustos de alta disponibilidade, como Oracle Real Application Clusters (RAC), que garantem a continuidade do serviço e minimizam o tempo de inatividade em ambientes críticos.
+      <br /><br />
+
+      <strong>Compatibilidade:</strong> Oracle é altamente compatível com uma vasta gama de sistemas operacionais, incluindo Linux, Windows, UNIX, e outros, além de oferecer integração com diversas linguagens de programação, como Java, Python, PHP e .NET.
+      <br /><br />
+
+      <strong>Grande Comunidade e Suporte:</strong> Como uma das soluções de banco de dados mais populares e adotadas em grandes empresas, Oracle possui uma comunidade global ativa, além de oferecer suporte profissional com consultoria, treinamentos e uma vasta documentação.
+      <br /><br />
+
+      <strong>Ferramentas e Bibliotecas:</strong> Oracle oferece uma vasta gama de ferramentas complementares, como Oracle SQL Developer para desenvolvimento e gerenciamento de banco de dados, Oracle Data Guard para recuperação de desastres, e Oracle Exadata para soluções de hardware otimizadas para Oracle Database.
+      <br /><br />
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

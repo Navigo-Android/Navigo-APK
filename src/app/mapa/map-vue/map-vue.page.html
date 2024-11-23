@@ -1,13 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-vue</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfvue"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/vue"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-vue</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Vue</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/vue.png" alt="Vue icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-vue.png" alt="Mapa Vue" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>Vue.js</strong> é um framework progressivo para construção de interfaces de usuário. Criado por Evan You em 2014, o Vue é projetado para ser adotado de forma gradual. Ele é ideal para criar aplicações web interativas e reativas, fornecendo um sistema de componentes simples e poderoso, que facilita a criação de interfaces dinâmicas e escaláveis. Vue é especialmente popular devido à sua simplicidade e desempenho.
+    <br /><br />
+
+    <strong>Por que Vue.js?</strong><br /><br />
+
+    <strong>Facilidade de Aprendizado:</strong> Vue é fácil de aprender, com uma curva de aprendizado suave. Sua documentação clara e concisa permite que os desenvolvedores se aprofundem rapidamente no framework, tornando-o acessível tanto para iniciantes quanto para desenvolvedores experientes.
+    <br /><br />
+
+    <strong>Reatividade:</strong> Vue utiliza um sistema reativo que atualiza automaticamente a interface do usuário sempre que os dados do aplicativo mudam, o que torna a construção de interfaces dinâmicas simples e eficiente.
+    <br /><br />
+
+    <strong>Componentização:</strong> Assim como outros frameworks modernos, Vue se baseia em componentes reutilizáveis. Cada componente pode ter seu próprio estado e lógica, o que facilita o desenvolvimento e manutenção de aplicações complexas.
+    <br /><br />
+
+    <strong>Desempenho:</strong> Vue é altamente otimizado e rápido, tornando-o uma excelente opção para criar aplicações rápidas e responsivas. Sua integração com outras bibliotecas e frameworks também é simples e eficiente.
+    <br /><br />
+
+    <strong>Grande Comunidade:</strong> Vue possui uma comunidade ativa e crescente, com muitos recursos como tutoriais, plugins, bibliotecas e extensões que ajudam a expandir suas funcionalidades e a resolver problemas rapidamente.
+    <br /><br />
+
+    <strong>Bibliotecas e Ferramentas:</strong> Vue oferece diversas ferramentas que facilitam o desenvolvimento de aplicações, como Vue Router para navegação, Vuex para gerenciamento de estado, e Vue CLI para facilitar o setup de projetos e o desenvolvimento em grande escala.
+    <br /><br />
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

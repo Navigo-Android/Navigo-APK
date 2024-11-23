@@ -1,13 +1,67 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-c</ion-title>
-  </ion-toolbar>
+<ion-header>
+    <div class="cabecalho">
+        <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+        <a href="/profissoes/pfc"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+        <a href="/artigos/c"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+    </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-c</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+    <div class="btn-back" style="max-width: 30px;">
+        <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+    </div>
+
+    <h1>C#</h1>
+    <div class="icon-container">
+        <img class="py-icon" src="assets/img/c.png" alt="C# icone">
+    </div>
+
+    <div class="img-map">
+        <img src="assets/img/roadmap-c.png" alt="Mapa C#" (click)="openFullscreen($event)">
+    </div>
+
+
+
+    <div class="text">
+        <strong>C#</strong> é uma linguagem de programação moderna, orientada a objetos e de propósito geral, criada
+        pela Microsoft. Amplamente utilizada no desenvolvimento de aplicativos para Windows, jogos, e sistemas
+        empresariais, é conhecida por sua robustez e desempenho eficiente.<br><br>
+
+        <strong>Por que C#?</strong><br><br>
+
+        <strong>Facilidade de Aprendizado:</strong> C# combina uma sintaxe clara com recursos avançados, tornando-a
+        acessível para iniciantes e poderosa para desenvolvedores experientes.<br><br>
+
+        <strong>Versatilidade:</strong> C# é usado em uma ampla gama de aplicações, incluindo desenvolvimento web (com
+        ASP.NET), jogos (com Unity), aplicativos desktop e móveis.<br><br>
+
+        <strong>Grande Comunidade:</strong> Com uma comunidade global e ativa, há vastos recursos, suporte online e
+        contribuições constantes para melhorar a linguagem e seu ecossistema.<br><br>
+
+        <strong>Bibliotecas e Frameworks:</strong> Oferece um rico conjunto de bibliotecas e frameworks, como .NET,
+        ASP.NET, Xamarin e Unity, que tornam o desenvolvimento mais rápido e eficiente.<br><br>
+
+    </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+    <!-- Barra de ferramentas que contém os botões -->
+    <ion-toolbar>
+        <!-- Conjunto de botões centralizados -->
+        <ion-buttons
+            style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+            <!-- Primeiro botão com ícone aumentado -->
+            <a href="/home">
+                <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+            </a>
+            <a href="/favoritos">
+                <img src="assets/img/favorito.png" alt="">
+            </a>
+            <a href="/profile">
+                <img src="assets/img/perfil-menu.png" alt="">
+            </a>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

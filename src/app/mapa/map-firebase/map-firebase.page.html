@@ -1,13 +1,97 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-firebase</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pffirebase"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/firebase"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-firebase</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Firebase</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/firebase.png" alt="firebase icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-firebase.png" alt="Mapa firebase" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>Firebase</strong> é uma plataforma de desenvolvimento de aplicativos móveis e web oferecida pelo Google, que
+    fornece uma gama de ferramentas para criação, gerenciamento e escalabilidade de aplicações. Lançado em 2011, o
+    Firebase oferece uma série de serviços como banco de dados em tempo real, autenticação de usuários, hospedagem, e
+    analytics, permitindo que os desenvolvedores se concentrem no desenvolvimento de funcionalidades sem se preocupar
+    com infraestrutura.
+    <br /><br />
+
+    <strong>Por que Firebase?</strong><br /><br />
+
+    <strong>Facilidade de Uso:</strong> Firebase oferece uma interface intuitiva e bem documentada, o que facilita a
+    integração de serviços em seus aplicativos. Ele é ideal para desenvolvedores que buscam soluções rápidas e
+    escaláveis, sem a necessidade de configurar servidores ou gerenciar bancos de dados complexos.
+    <br /><br />
+
+    <strong>Banco de Dados em Tempo Real:</strong> Uma das funcionalidades mais poderosas do Firebase é seu banco de
+    dados em tempo real. Ele permite que os dados sejam sincronizados automaticamente entre os clientes, facilitando a
+    criação de aplicativos colaborativos e interativos, como chats e jogos multijogador.
+    <br /><br />
+
+    <strong>Autenticação Simples:</strong> Firebase fornece um sistema de autenticação integrado que suporta login com
+    e-mail, senha, redes sociais (Google, Facebook, Twitter, etc.) e até autenticação anônima. Isso permite que você
+    implemente autenticação em minutos, sem necessidade de configurar um backend complexo.
+    <br /><br />
+
+    <strong>Escalabilidade:</strong> A plataforma é altamente escalável, podendo atender desde pequenos aplicativos até
+    grandes sistemas que precisam de alta disponibilidade e desempenho. Firebase pode facilmente crescer à medida que
+    seu aplicativo se torna mais popular, sem a necessidade de reconfigurações.
+    <br /><br />
+
+    <strong>Hospedagem:</strong> Firebase oferece hospedagem rápida e segura para seus aplicativos web, com suporte para
+    deploy contínuo e um sistema de CDN (Content Delivery Network) que garante que seu aplicativo seja servido
+    rapidamente para usuários em qualquer parte do mundo.
+    <br /><br />
+
+    <strong>Analytics:</strong> Firebase inclui o Google Analytics integrado, permitindo que você monitore o
+    comportamento dos usuários em tempo real e colete dados valiosos para melhorar seu aplicativo. Ele fornece
+    relatórios detalhados sobre métricas importantes, como retenção de usuários e eventos personalizados.
+    <br /><br />
+
+    <strong>Grande Comunidade e Suporte:</strong> Firebase tem uma comunidade ativa e em crescimento, oferecendo uma
+    rica documentação, tutoriais, vídeos e fóruns. Como ele é mantido pelo Google, você também pode contar com um
+    excelente suporte técnico e constantes atualizações.
+    <br /><br />
+
+    <strong>Bibliotecas e Ferramentas:</strong> Firebase oferece diversas bibliotecas e SDKs para integração com várias
+    plataformas, como Android, iOS, Web e Unity. Além disso, possui recursos adicionais como Firebase Cloud Functions,
+    Firebase Cloud Messaging e Firebase Performance Monitoring.
+    <br /><br/>
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,106 @@
+/*Ínicio do Header*/
+ion-header {
+  background-color: #023e8a;
+  border-bottom: 2px #fff solid;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 85px;
+  margin-right: 85px;
+  padding: 5px;
+}
+
+.logo {
+  max-width: 30px;
+}
+
+.user-pf {
+  max-width: 35px;
+}
+
+/*Fim o Header*/
+
+ion-content,
+ion-item {
+  /*Ínicio do Content*/
+  --background: #0077b6;
+  /* fallback for old browsers */
+}
+
+ion-content>h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.py-icon {
+  max-width: 45px;
+}
+
+
+.img-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.img-map img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  /* Mostra que é clicável */
+}
+
+
+
+.text {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+ion-label,
+h2,
+ion-icon,
+.btn-before {
+  color: #fff;
+}
+
+.justify-icon {
+  display: flex;
+  justify-content: center;
+  /* Centraliza as imagens horizontalmente */
+  gap: 20px;
+  /* Define um espaço (gap) entre as imagens */
+}
+
+.icon-artigos {
+  max-width: 30px;
+  /* Ajuste o tamanho das imagens conforme necessário */
+}
+
+a,
+.icon-tabs {
+  font-size: 25px;
+  /* Ajuste o tamanho conforme necessário */
+  width: 25px;
+  /* Opcional: Ajuste a largura do contêiner */
+}
+
+
+ion-footer,
+ion-toolbar {
+  --background: #023e8a;
+  border-top: 1px #fff solid;
+}

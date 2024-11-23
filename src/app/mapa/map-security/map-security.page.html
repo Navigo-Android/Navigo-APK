@@ -1,13 +1,96 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-security</ion-title>
-  </ion-toolbar>
+<ion-header>
+    <div class="cabecalho">
+        <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+        <a href="/profissoes/pfsecurity"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+        <a href="/artigos/security"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+    </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-security</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+    <div class="btn-back" style="max-width: 30px;">
+        <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+    </div>
+
+    <h1>Cibersegurança</h1>
+    <div class="icon-container">
+        <img class="py-icon" src="assets/img/cyber-security.png" alt="Cibersegurança icone">
+    </div>
+
+    <div class="img-map">
+        <img src="assets/img/roadmap-security.png" alt="Mapa Cibersegurança" (click)="openFullscreen($event)">
+    </div>
+
+
+
+    <div class="text">
+        <strong>Cibersegurança</strong> é o conjunto de práticas, tecnologias e processos utilizados para proteger
+        sistemas, redes, dispositivos e dados contra ataques, danos ou acessos não autorizados. Em um mundo cada vez
+        mais digital, a cibersegurança se tornou essencial para garantir a integridade, confidencialidade e
+        disponibilidade da informação.
+        <br /><br />
+
+        <strong>Por que Cibersegurança?</strong><br /><br />
+
+        <strong>Proteção de Dados:</strong> A cibersegurança assegura que os dados sensíveis, como informações pessoais
+        e financeiras, sejam protegidos contra vazamentos, roubo e acesso não autorizado, garantindo a privacidade dos
+        usuários e a conformidade com regulamentações de proteção de dados.
+        <br /><br />
+
+        <strong>Prevenção de Ataques:</strong> A cibersegurança envolve a implementação de medidas para prevenir ataques
+        cibernéticos, como malware, phishing, ransomware e ataques DDoS. Isso inclui o uso de firewalls, antivírus, e
+        técnicas de criptografia para proteger as redes e sistemas.
+        <br /><br />
+
+        <strong>Resposta a Incidentes:</strong> Em caso de ataque ou violação de dados, a cibersegurança fornece
+        protocolos de resposta rápida para minimizar danos, restaurar sistemas afetados e comunicar incidentes de forma
+        eficaz às partes interessadas.
+        <br /><br />
+
+        <strong>Autenticação e Controle de Acesso:</strong> Um dos pilares da cibersegurança é garantir que apenas
+        usuários autorizados tenham acesso aos sistemas e informações críticas. Isso é feito através de métodos como
+        autenticação multifatorial, gestão de identidade e controle rigoroso de permissões.
+        <br /><br />
+
+        <strong>Resiliência Organizacional:</strong> A cibersegurança contribui para a construção de uma infraestrutura
+        de TI resiliente, capaz de se recuperar rapidamente de falhas ou ataques. Isso envolve o uso de backups,
+        redundância e planos de continuidade de negócios.
+        <br /><br />
+
+        <strong>Adoção de Melhores Práticas:</strong> A cibersegurança envolve a adoção de melhores práticas e normas,
+        como o uso de criptografia para proteger dados em trânsito, atualização constante de sistemas e softwares, e
+        treinamento contínuo de funcionários para reconhecer e evitar ameaças.
+        <br /><br />
+
+        <strong>Grande Comunidade:</strong> A cibersegurança tem uma comunidade global de profissionais, pesquisadores e
+        especialistas, que colaboram na identificação de novas ameaças, no desenvolvimento de soluções inovadoras e na
+        disseminação de melhores práticas para a proteção digital.
+        <br /><br />
+
+        <strong>Ferramentas e Tecnologias:</strong> Existem diversas ferramentas e tecnologias utilizadas em
+        cibersegurança, como antivírus, sistemas de detecção de intrusões, ferramentas de criptografia e plataformas de
+        monitoramento contínuo, que ajudam a proteger redes e sistemas contra ataques cibernéticos.
+        <br /><br />
+    </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+    <!-- Barra de ferramentas que contém os botões -->
+    <ion-toolbar>
+        <!-- Conjunto de botões centralizados -->
+        <ion-buttons
+            style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+            <!-- Primeiro botão com ícone aumentado -->
+            <a href="/home">
+                <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+            </a>
+            <a href="/favoritos">
+                <img src="assets/img/favorito.png" alt="">
+            </a>
+            <a href="/profile">
+                <img src="assets/img/perfil-menu.png" alt="">
+            </a>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

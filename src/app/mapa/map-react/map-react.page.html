@@ -1,13 +1,78 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-react</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfreact"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/react"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-react</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>React</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/react.png" alt="React icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-react.png" alt="Mapa React" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>React</strong> é uma biblioteca JavaScript para criar interfaces de usuário. Ele é utilizado para construir
+    aplicações web de forma eficiente e escalável, aproveitando o conceito de componentes reutilizáveis. React é
+    amplamente adotado para criar interfaces dinâmicas e reativas, e é uma das bibliotecas mais populares no
+    desenvolvimento front-end.
+    <br /><br />
+
+    <strong>Por que React?</strong><br /><br />
+
+    <strong>Facilidade de Uso:</strong> React permite a criação de interfaces de maneira intuitiva com componentes
+    pequenos e reutilizáveis, o que facilita a manutenção e a evolução do código.
+    <br /><br />
+
+    <strong>Desempenho:</strong> React utiliza o conceito de Virtual DOM, que otimiza a atualização da interface,
+    garantindo um desempenho superior mesmo em aplicações mais complexas.
+    <br /><br />
+
+    <strong>Componentização:</strong> Com React, tudo é um componente. Isso significa que você pode dividir sua
+    interface em pequenas partes reutilizáveis, o que melhora a organização e facilita o desenvolvimento.
+    <br /><br />
+
+    <strong>Grande Comunidade:</strong> React possui uma comunidade global vibrante, com inúmeros tutoriais,
+    bibliotecas, ferramentas e extensões que tornam o desenvolvimento mais rápido e eficiente.
+    <br /><br />
+
+    <strong>Bibliotecas e Ferramentas:</strong> React possui um ecossistema vasto, com bibliotecas como React Router
+    para navegação, Redux para gerenciamento de estado, e Next.js para aplicações web otimizadas com renderização do
+    lado do servidor.
+    <br /><br />
+
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

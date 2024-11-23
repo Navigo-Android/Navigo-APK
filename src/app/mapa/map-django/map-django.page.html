@@ -1,13 +1,85 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-django</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfdjango"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/django"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-django</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Django</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/django.png" alt="Django icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-django.png" alt="Mapa Django" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>Django</strong> é um framework web de alto nível para Python, que facilita o desenvolvimento de aplicações
+    web robustas e escaláveis. Ele segue o padrão de desenvolvimento "Don't Repeat Yourself" (DRY), que promove a
+    reutilização de código e a criação de aplicações mais eficientes e fáceis de manter.
+    <br /><br />
+
+    <strong>Por que Django?</strong><br /><br />
+
+    <strong>Facilidade de Uso:</strong> Django fornece uma estrutura completa para o desenvolvimento web, com recursos
+    como autenticação de usuário, gerenciamento de banco de dados e administração, permitindo que os desenvolvedores se
+    concentrem em escrever funcionalidades específicas sem reinventar a roda.
+    <br /><br />
+
+    <strong>Segurança:</strong> Django vem com diversas medidas de segurança embutidas, como proteção contra ataques de
+    CSRF, XSS e SQL Injection, além de ferramentas para criptografar senhas e garantir que os dados dos usuários sejam
+    tratados de maneira segura.
+    <br /><br />
+
+    <strong>Administração Automática:</strong> Django possui um sistema de administração gerado automaticamente, o que
+    facilita o gerenciamento de conteúdo e usuários, tornando-o ideal para construir sistemas internos de administração.
+    <br /><br />
+
+    <strong>Escalabilidade:</strong> Django é projetado para suportar aplicações de grande escala, como redes sociais ou
+    plataformas de comércio eletrônico, com a capacidade de se integrar facilmente a várias tecnologias e escalar
+    horizontalmente conforme a demanda cresce.
+    <br /><br />
+
+    <strong>Grande Comunidade:</strong> Django tem uma comunidade ativa e uma vasta documentação, o que torna o
+    aprendizado mais fácil e oferece muitos recursos, como bibliotecas e pacotes que adicionam funcionalidades ao
+    framework.
+    <br /><br />
+
+    <strong>Bibliotecas e Ferramentas:</strong> Django possui uma vasta gama de bibliotecas e ferramentas
+    complementares, como Django REST Framework (DRF) para APIs, Celery para tarefas assíncronas e Channels para suporte
+    a WebSockets, permitindo a construção de aplicações web modernas e de alto desempenho.
+    <br /><br />
+
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

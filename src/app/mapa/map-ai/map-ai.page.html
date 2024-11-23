@@ -1,13 +1,102 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-AI</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfai"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/ai"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-AI</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Inteligência Artificial (IA)</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/ai.png" alt="IA icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-ia.png" alt="Mapa IA" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>Inteligência Artificial (IA)</strong> refere-se à simulação de processos de inteligência humana por meio de
+    máquinas, especialmente sistemas de computador. A IA envolve o desenvolvimento de algoritmos que permitem que as
+    máquinas realizem tarefas que normalmente exigiriam inteligência humana, como reconhecimento de padrões,
+    aprendizado, resolução de problemas e tomada de decisões. A IA está revolucionando diversos setores, incluindo
+    saúde, finanças, transporte e muito mais.
+    <br /><br />
+
+    <strong>Por que Inteligência Artificial?</strong><br /><br />
+
+    <strong>Automação Inteligente:</strong> A IA permite que processos e tarefas repetitivas sejam automatizados de
+    forma mais eficiente, economizando tempo e recursos. Isso é especialmente útil em áreas como manufatura, atendimento
+    ao cliente e análise de grandes volumes de dados.
+    <br /><br />
+
+    <strong>Aprendizado de Máquina (Machine Learning):</strong> O aprendizado de máquina, uma das áreas mais avançadas
+    da IA, permite que os sistemas aprendam com dados, identifiquem padrões e façam previsões ou decisões sem serem
+    explicitamente programados. Isso torna a IA capaz de evoluir e melhorar continuamente.
+    <br /><br />
+
+    <strong>Processamento de Linguagem Natural (PLN):</strong> A IA, por meio do PLN, permite que as máquinas
+    compreendam, interpretem e gerem linguagem humana. Isso é utilizado em assistentes virtuais, tradução automática,
+    chatbots e sistemas de recomendação.
+    <br /><br />
+
+    <strong>Visão Computacional:</strong> A visão computacional é uma área da IA que permite que as máquinas "vejam" e
+    interpretem o mundo ao seu redor, reconhecendo objetos, rostos, padrões e movimentos. Isso tem aplicações em
+    segurança, carros autônomos, medicina e muito mais.
+    <br /><br />
+
+    <strong>Tomada de Decisão Autônoma:</strong> Sistemas baseados em IA podem tomar decisões autônomas com base em
+    dados e análises em tempo real. Isso é utilizado em áreas como finanças para detectar fraudes, em veículos autônomos
+    para navegação e em sistemas de saúde para diagnósticos rápidos e precisos.
+    <br /><br />
+
+    <strong>Escalabilidade e Eficiência:</strong> A IA permite a escalabilidade de operações e a otimização de
+    processos, adaptando-se rapidamente às mudanças e necessidades do mercado. Ela pode lidar com volumes massivos de
+    dados e realizar tarefas complexas com uma eficiência impressionante.
+    <br /><br />
+
+    <strong>Inovação e Progresso:</strong> A IA está constantemente evoluindo, trazendo inovações em áreas como
+    inteligência cognitiva, automação de processos, criação de novos produtos e serviços, e ainda criando novas
+    oportunidades de negócios.
+    <br /><br />
+
+    <strong>Grande Comunidade de Desenvolvedores:</strong> A IA tem uma comunidade global ativa que está constantemente
+    colaborando em novos algoritmos, frameworks e modelos. Há também muitos recursos educacionais e tutoriais que ajudam
+    tanto iniciantes quanto profissionais experientes a aproveitar o potencial da IA.
+    <br /><br />
+
+    <strong>Ferramentas e Bibliotecas:</strong> Existem várias ferramentas e bibliotecas poderosas para desenvolvimento
+    de IA, como TensorFlow, PyTorch, OpenAI, e Scikit-learn. Essas ferramentas facilitam a criação e o treinamento de
+    modelos de aprendizado de máquina, redes neurais e muito mais.
+    <br /><br />
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

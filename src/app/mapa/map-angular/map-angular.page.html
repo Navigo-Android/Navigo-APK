@@ -1,13 +1,85 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-angular</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfangular"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/angular"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-angular</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Angular</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/angular.png" alt="Angular icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-angular.png" alt="Mapa Angular" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>Angular</strong> é um framework robusto para o desenvolvimento de aplicações web, criado pela Google.
+    Lançado inicialmente em 2010, o Angular é amplamente utilizado para a criação de aplicativos web dinâmicos e de
+    grande escala, com foco na performance, escalabilidade e na construção de interfaces de usuário eficientes. Angular
+    é baseado em TypeScript e oferece uma estrutura completa para o desenvolvimento, incluindo ferramentas para
+    roteamento, formatação, injeção de dependência e muito mais.
+    <br /><br />
+
+    <strong>Por que Angular?</strong><br /><br />
+
+    <strong>Estrutura Completa:</strong> Angular fornece uma solução completa, desde o front-end até o gerenciamento de
+    estado, o que elimina a necessidade de integrar diferentes bibliotecas. Ele inclui ferramentas para roteamento,
+    testes, formulários e até integração com APIs, tornando o desenvolvimento mais eficiente e organizado.
+    <br /><br />
+
+    <strong>TypeScript:</strong> Angular é escrito em TypeScript, uma linguagem que é um superset do JavaScript e
+    oferece tipagem estática e recursos de OOP (programação orientada a objetos). Isso facilita a escrita de código mais
+    robusto, fácil de manter e menos propenso a erros.
+    <br /><br />
+
+    <strong>Componentização:</strong> Angular utiliza a arquitetura baseada em componentes, permitindo que o código seja
+    dividido em blocos reutilizáveis e testáveis. Isso facilita o desenvolvimento e manutenção de grandes aplicações.
+    <br /><br />
+
+    <strong>Injeção de Dependência:</strong> Angular tem um sistema avançado de injeção de dependência que facilita o
+    gerenciamento de dependências dentro da aplicação, tornando o código mais modular e facilitando os testes unitários.
+    <br /><br />
+
+    <strong>Grande Comunidade:</strong> Angular possui uma comunidade global ativa, com uma enorme quantidade de
+    recursos, tutoriais e exemplos. Como ele é mantido pelo Google, também conta com grande suporte a longo prazo e
+    contínuas atualizações.
+    <br /><br />
+
+    <strong>Bibliotecas e Ferramentas:</strong> Angular possui um ecossistema rico de bibliotecas e ferramentas, como
+    Angular CLI para facilitar a configuração de projetos, RxJS para programação reativa, e Angular Material para
+    componentes de interface modernos.
+    <br /><br />
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

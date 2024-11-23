@@ -1,13 +1,96 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-typescript</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pftypescript"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/typescript"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-typescript</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Typescript</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/typescript.png" alt="Typescript icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-typescript.png" alt="Mapa Typescript" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>TypeScript</strong> é um superset do JavaScript que adiciona tipagem estática opcional e outros recursos
+    para facilitar o desenvolvimento de aplicações robustas e escaláveis. Criado pela Microsoft, o TypeScript foi
+    lançado em 2012 e rapidamente se tornou uma das linguagens mais populares entre os desenvolvedores de JavaScript.
+    Ele permite que o código JavaScript seja mais seguro, organizado e fácil de manter, especialmente em grandes
+    projetos. O TypeScript é transpilado para JavaScript, o que significa que qualquer código JavaScript válido também é
+    válido em TypeScript.
+    <br /><br />
+
+    <strong>Por que TypeScript?</strong><br /><br />
+
+    <strong>Tipagem Estática:</strong> TypeScript permite que os desenvolvedores definam tipos para variáveis,
+    parâmetros e valores de retorno de funções. Isso ajuda a detectar erros mais cedo no processo de desenvolvimento,
+    antes mesmo da execução do código. A tipagem estática reduz a possibilidade de falhas em tempo de execução e melhora
+    a confiabilidade do código.
+    <br /><br />
+
+    <strong>Integração com JavaScript:</strong> TypeScript é totalmente compatível com JavaScript, o que significa que
+    você pode usar bibliotecas e frameworks JavaScript existentes no seu código TypeScript sem problemas. A transpilação
+    converte automaticamente o código TypeScript para JavaScript, tornando-o executável em qualquer ambiente que suporte
+    JavaScript.
+    <br /><br />
+
+    <strong>Desenvolvimento de Grandes Aplicações:</strong> TypeScript é particularmente útil para grandes projetos,
+    pois ajuda a organizar o código e facilita a colaboração entre equipes. O sistema de tipos oferece autocompletar e
+    verificação de tipos, o que melhora a experiência do desenvolvedor e torna o código mais legível e fácil de manter.
+    <br /><br />
+
+    <strong>Ferramentas de Desenvolvimento:</strong> O TypeScript possui suporte nativo em muitas ferramentas modernas
+    de desenvolvimento, como editores de código (VS Code, por exemplo) e compiladores. Ele também se integra
+    perfeitamente com frameworks populares como Angular, React e Vue, proporcionando uma experiência de desenvolvimento
+    mais rica e eficiente.
+    <br /><br />
+
+    <strong>Escalabilidade:</strong> Com TypeScript, é possível construir aplicações escaláveis, organizando o código em
+    módulos e classes de forma mais estruturada. O sistema de tipos ajuda a evitar erros à medida que o código cresce e
+    se torna mais complexo, tornando a manutenção de grandes bases de código muito mais fácil.
+    <br /><br />
+
+    <strong>Popularidade e Comunidade:</strong> TypeScript tem uma comunidade crescente e ativa, com um enorme número de
+    bibliotecas, frameworks e tutoriais disponíveis. A popularidade da linguagem cresce constantemente, especialmente
+    entre desenvolvedores que trabalham com JavaScript em grande escala.
+    <br /><br />
+
+    <strong>Ferramentas e Bibliotecas:</strong> TypeScript oferece suporte para diversas bibliotecas e frameworks de
+    desenvolvimento, incluindo Angular, React e Vue.js, entre outros. Além disso, o TypeScript é amplamente adotado em
+    ferramentas como o Webpack, Babel e outros, o que facilita a integração com outras tecnologias.
+    <br /><br />
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

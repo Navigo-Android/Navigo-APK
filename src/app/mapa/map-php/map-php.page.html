@@ -1,13 +1,70 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-php</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfphp"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/php"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-php</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>PHP</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/php.png" alt="PHP icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-php.png" alt="Mapa PHP" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>PHP</strong> é uma linguagem de programação de alto nível, interpretada e de propósito geral, amplamente
+    utilizada para desenvolvimento web. Sua integração com servidores e bancos de dados a torna uma escolha popular
+    entre desenvolvedores para criar sites dinâmicos e interativos.<br><br>
+
+    <strong>Por que PHP?</strong><br><br>
+
+    <strong>Facilidade de Aprendizado:</strong> A sintaxe do PHP é simples e intuitiva, especialmente para quem está
+    começando no desenvolvimento web.<br><br>
+
+    <strong>Ampla Utilização:</strong> PHP é a base de muitos sites e sistemas, incluindo grandes plataformas como
+    WordPress, Facebook e Wikipedia.<br><br>
+
+    <strong>Integração Poderosa:</strong> Oferece suporte nativo para diversos bancos de dados (MySQL, PostgreSQL,
+    SQLite) e servidores web, como Apache e Nginx.<br><br>
+
+    <strong>Grande Comunidade:</strong> Com uma comunidade ativa e extensa, há uma abundância de tutoriais,
+    documentações e suporte online disponíveis.<br><br>
+
+    <strong>Frameworks e Ferramentas:</strong> PHP possui frameworks robustos, como Laravel, Symfony e CodeIgniter, que
+    aceleram o desenvolvimento e garantem boas práticas.<br><br>
+
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

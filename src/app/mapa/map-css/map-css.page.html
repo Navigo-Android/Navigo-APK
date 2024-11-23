@@ -1,13 +1,68 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-css</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfcss"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/css"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-css</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>CSS</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/css.png" alt="CSS icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-css.png" alt="Mapa CSS" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>CSS</strong> (Cascading Style Sheets) é uma linguagem de estilo usada para controlar a aparência e o layout
+    de páginas web. É essencial para criar designs atraentes e responsivos, permitindo que os desenvolvedores
+    personalizem cores, fontes, posicionamento e outros aspectos visuais das interfaces.<br><br>
+
+    <strong>Por que CSS?</strong><br><br>
+
+    <strong>Facilidade de Uso:</strong> CSS é simples de aprender e permite aplicar estilos diretamente em elementos
+    HTML com poucas linhas de código.<br><br>
+
+    <strong>Versatilidade:</strong> CSS é usado para estilizar qualquer página web, desde pequenos sites pessoais até
+    plataformas complexas, com suporte para layouts responsivos e animações.<br><br>
+
+    <strong>Grande Comunidade:</strong> Possui uma vasta base de usuários e desenvolvedores, com inúmeros recursos,
+    tutoriais e frameworks disponíveis para suporte.<br><br>
+
+    <strong>Bibliotecas e Ferramentas:</strong> Frameworks como Bootstrap, Tailwind CSS e Bulma facilitam o
+    desenvolvimento de interfaces elegantes e consistentes, enquanto preprocessadores como Sass e Less adicionam
+    funcionalidades avançadas ao CSS.<br><br>
+
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

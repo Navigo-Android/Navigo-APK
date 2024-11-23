@@ -1,13 +1,90 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-mysql</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
+    <a href="/profissoes/pfmysql"><img src="assets/img/profissao.png" alt="Perfil" class="user-pf" /></a>
+    <a href="/artigos/mysql"><img src="assets/img/artigo.png" alt="Artigos" class="artigos" /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-mysql</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"><img src="assets\img\btn-back.png" alt="Botão Voltar" /></a>
+  </div>
+
+  <h1>Mysql</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/mysql.png" alt="MySQL icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roadmap-mysql.png" alt="Mapa MySQL" (click)="openFullscreen($event)">
+  </div>
+
+
+
+  <div class="text">
+    <strong>MySQL</strong> é um sistema de gerenciamento de banco de dados relacional (SGBD) de código aberto,
+    amplamente utilizado para armazenar e gerenciar dados em aplicações web e empresariais. Criado por Michael "Monty"
+    Widenius em 1995, MySQL é um dos bancos de dados mais populares do mundo, conhecido por sua confiabilidade,
+    desempenho e flexibilidade. Ele suporta a linguagem SQL (Structured Query Language), que permite aos desenvolvedores
+    realizar operações como consultas, inserções, atualizações e exclusões de dados.
+    <br /><br />
+
+    <strong>Por que MySQL?</strong><br /><br />
+
+    <strong>Desempenho:</strong> MySQL é altamente otimizado para fornecer um excelente desempenho em operações de
+    leitura e gravação, mesmo em grandes volumes de dados. Ele possui mecanismos de armazenamento eficientes, como
+    InnoDB, que garantem rapidez e consistência.
+    <br /><br />
+
+    <strong>Facilidade de Uso:</strong> MySQL é fácil de instalar e configurar, além de ser amplamente documentado. Sua
+    sintaxe SQL é simples e intuitiva, o que facilita a criação e manutenção de bancos de dados.
+    <br /><br />
+
+    <strong>Escalabilidade:</strong> MySQL pode ser facilmente escalado para lidar com grandes quantidades de dados,
+    tornando-o adequado tanto para pequenas aplicações quanto para grandes sistemas corporativos. Ele suporta
+    replicação, clustering e particionamento de dados para melhorar a distribuição e a confiabilidade.
+    <br /><br />
+
+    <strong>Segurança:</strong> MySQL oferece recursos avançados de segurança, como criptografia de dados, autenticação
+    forte e controle de acesso, garantindo que os dados sejam protegidos contra acessos não autorizados.
+    <br /><br />
+
+    <strong>Compatibilidade:</strong> MySQL é compatível com muitas plataformas, incluindo Linux, Windows, macOS e
+    outros sistemas operacionais. Ele também se integra facilmente com diversas linguagens de programação, como PHP,
+    Python, Java e Node.js, facilitando seu uso em uma variedade de projetos.
+    <br /><br />
+
+    <strong>Grande Comunidade:</strong> Como um dos bancos de dados mais usados, MySQL possui uma enorme comunidade de
+    desenvolvedores e administradores, que oferecem suporte, tutoriais, plugins e ferramentas de terceiros, o que torna
+    o aprendizado e a resolução de problemas muito mais fáceis.
+    <br /><br />
+
+    <strong>Ferramentas e Bibliotecas:</strong> MySQL possui diversas ferramentas e bibliotecas que facilitam sua
+    administração e integração com outras tecnologias, como MySQL Workbench para design e gerenciamento de bancos de
+    dados, e bibliotecas para linguagens como Python, PHP e JavaScript.
+    <br /><br />
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
