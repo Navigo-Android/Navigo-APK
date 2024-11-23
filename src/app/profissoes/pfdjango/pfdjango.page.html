@@ -1,13 +1,79 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pfdjango</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+    <a href="/artigos/python"
+      ><img src="assets/img/artigo.png" alt="Perfil" class="logo"
+    /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pfdjango</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- Conteúdo principal da página -->
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/mapa/map-python"
+      ><img src="assets\img\btn-back.png" alt="Botão Voltar"
+    /></a>
+  </div>
+
+  <div class="tittle-content">
+    <h3>Profissões</h3>
+    <img src="assets/img/django.png" alt="django-img" class="icon-js" />
+    <p class="text-intro">Um programador ou desenvolvedor Django é responsável por criar e manter aplicações web usando o Django, um framework de desenvolvimento back-end em Python. Django é conhecido por sua eficiência, escalabilidade e foco em segurança, permitindo a construção de aplicações robustas e escaláveis com rapidez.</p>
+  </div>
+
+  <ion-item button (click)="toggleContent('content1')"><!--Barra 1-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor de Aplicações Web</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content1']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content1']" class="btn-before">
+    <p class="text-info">Responsavel por criar aplicações web, móveis ou desktop usando frameworks como Django, Flask ou PyQt.</p>
+    <p class="salario">Média Salarial: R$4 mil - R$10 mil</p>
+  </div><!--Barra 1-->
+
+  <ion-item button (click)="toggleContent('content2')"><!--Barra 2-->
+    <ion-label>
+      <h2 class="pf-box">Gerenciamento de banco de dados</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content2']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content2']" class="btn-before">
+    <p class="text-info">Configurar e trabalhar com bancos de dados relacionais (como PostgreSQL, MySQL ou SQLite) usando o ORM (Object-Relational Mapping) do Django.</p>
+    <p class="salario">Média Salarial: R$3 mil - R$6 mil</p>
+  </div><!--Barra 2-->
+
+  <div class="btn-top" style="display: flex; justify-content: center; margin-top: 35px;">
+    <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large" style="background-color: #0077b6;"></ion-icon>
+  </div>  
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

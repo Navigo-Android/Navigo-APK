@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
 
 @Component({
-  selector: 'app-pfsecurity',
-  templateUrl: './pfsecurity.page.html',
-  styleUrls: ['./pfsecurity.page.scss'],
+  selector: 'app-profissoes-pfsecurity',
+  templateUrl: 'pfsecurity.page.html',
+  styleUrls: ['pfsecurity.page.scss'],
 })
-export class PfsecurityPage implements OnInit {
+export class PfsecurityPage {
+  @ViewChild(IonContent) content!: IonContent;
 
-  constructor() { }
+  isContentVisible: { [K in 'content1' | 'content2' | 'content3' | 'content4' | 'content5']: boolean } = {
+    content1: false,
+    content2: false,
+    content3: false,
+    content4: false,
+    content5: false,
+  };
 
-  ngOnInit() {
+  toggleContent(contentKey: 'content1' | 'content2' | 'content3' | 'content4' | 'content5') {
+    this.isContentVisible[contentKey] = !this.isContentVisible[contentKey];
   }
 
+  scrollToTop() {
+    this.content.scrollToTop(500);
+  }
 }

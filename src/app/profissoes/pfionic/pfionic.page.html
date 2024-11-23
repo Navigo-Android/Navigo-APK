@@ -1,13 +1,94 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pfionic</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+    <a href="/artigos/python"
+      ><img src="assets/img/artigo.png" alt="Perfil" class="logo"
+    /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pfionic</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- Conteúdo principal da página -->
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/mapa/map-python"
+      ><img src="assets\img\btn-back.png" alt="Botão Voltar"
+    /></a>
+  </div>
+
+  <div class="tittle-content">
+    <h3>Profissões</h3>
+    <img src="assets/img/ionic.png" alt="ionic-img" class="icon-js" />
+    <p class="text-intro">Um desenvolvedor ou programador que trabalha com Ionic se especializa no desenvolvimento de aplicações móveis híbridas e progressivas (PWA), utilizando o framework Ionic junto com tecnologias como HTML, CSS, JavaScript/TypeScript e Angular, React, ou Vue.js. O Ionic permite criar aplicações que podem ser executadas tanto em dispositivos Android e iOS quanto na web, tudo a partir de uma única base de código. </p>
+  </div>
+
+  <ion-item button (click)="toggleContent('content1')"><!--Barra 1-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor Mobile</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content1']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content1']" class="btn-before">
+    <p class="text-info">Especialista em criar aplicativos móveis híbridos, utilizando Ionic para construir aplicativos que funcionam em plataformas como Android, iOS e Web com uma única base de código.</p>
+    <p class="salario">Média Salarial: R$3 mil - R$8 mil</p>
+  </div><!--Barra 1-->
+
+  <ion-item button (click)="toggleContent('content2')"><!--Barra 2-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor Full-Stack</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content2']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content2']" class="btn-before">
+    <p class="text-info">Desenvolvedor que trabalha tanto no front-end com Ionic quanto no back-end com tecnologias como Node.js, Express, MongoDB ou outros serviços em nuvem.</p>
+    <p class="salario">Média Salarial: R$5 mil - R$12 mil</p>
+  </div><!--Barra 2-->
+
+  <ion-item button (click)="toggleContent('content3')"><!--Barra 3-->
+    <ion-label>
+      <h2 class="pf-box">Engenheiro de Aplicações Multiplataforma</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content3']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content3']" class="btn-before">
+    <p class="text-info">Focado em desenvolver aplicativos móveis e de desktop usando Ionic, criando soluções que funcionam de forma consistente em diferentes plataformas.</p>
+    <p class="salario">Média Salarial: R$4 mil - R$15 mil</p>
+  </div><!--Barra 3-->
+
+  <div class="btn-top" style="display: flex; justify-content: center; margin-top: 35px;">
+    <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large" style="background-color: #0077b6;"></ion-icon>
+  </div>  
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

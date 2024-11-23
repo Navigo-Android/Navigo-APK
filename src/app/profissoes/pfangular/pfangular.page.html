@@ -1,13 +1,109 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pfangular</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+    <a href="/artigos/python"
+      ><img src="assets/img/artigo.png" alt="Perfil" class="logo"
+    /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pfangular</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- Conteúdo principal da página -->
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/mapa/map-python"
+      ><img src="assets\img\btn-back.png" alt="Botão Voltar"
+    /></a>
+  </div>
+
+  <div class="tittle-content">
+    <h3>Profissões</h3>
+    <img src="assets/img/angular.png" alt="angular-img" class="icon-js" />
+    <p class="text-intro">Um programador ou desenvolvedor de Angular é responsável por criar, implementar e manter aplicações web interativas utilizando o Angular, que é um framework de desenvolvimento front-end baseado em TypeScript. O Angular é amplamente utilizado para construir interfaces modernas, dinâmicas e responsivas. </p>
+  </div>
+
+  <ion-item button (click)="toggleContent('content1')"><!--Barra 1-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor Front-End</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content1']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content1']" class="btn-before">
+    <p class="text-info">Focado no desenvolvimento da interface do usuário, utilizando Angular, HTML, CSS e outras tecnologias.</p>
+    <p class="salario">Média Salarial: R$3 mil - R$8 mil</p>
+  </div><!--Barra 1-->
+
+  <ion-item button (click)="toggleContent('content2')"><!--Barra 2-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor Angular</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content2']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content2']" class="btn-before">
+    <p class="text-info">Especialista no framework Angular, trabalhando exclusivamente no desenvolvimento e manutenção de aplicações usando essa tecnologia.</p>
+    <p class="salario">Média Salarial: R$3 mil - R$12 mil</p>
+  </div><!--Barra 2-->
+
+  <ion-item button (click)="toggleContent('content3')"><!--Barra 3-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor Full Stack</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content3']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content3']" class="btn-before">
+    <p class="text-info">Profissional que trabalha tanto no front-end (com Angular) quanto no back-end (usando tecnologias como Node.js, Java, ou Python).</p>
+    <p class="salario">Média Salarial: R$7 mil - R$12 mil</p>
+  </div><!--Barra 3-->
+
+  <ion-item button (click)="toggleContent('content4')"><!--Barra 4-->
+    <ion-label>
+      <h2 class="pf-box"> Desenvolvedor Mobile com Angular</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content4']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content4']" class="btn-before">
+    <p class="text-info"> Utiliza Angular no desenvolvimento de aplicativos móveis híbridos com o framework Ionic.</p>
+    <p class="salario">Média Salarial: R$3 mil - R$8 mil</p>
+  </div><!--Barra 4-->
+
+  <div class="btn-top" style="display: flex; justify-content: center; margin-top: 35px;">
+    <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large" style="background-color: #0077b6;"></ion-icon>
+  </div>  
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

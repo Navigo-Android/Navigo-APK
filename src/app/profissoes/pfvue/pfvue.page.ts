@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
 
 @Component({
-  selector: 'app-pfvue',
-  templateUrl: './pfvue.page.html',
-  styleUrls: ['./pfvue.page.scss'],
+  selector: 'app-profissoes-pfvue',
+  templateUrl: 'pfvue.page.html',
+  styleUrls: ['pfvue.page.scss'],
 })
-export class PfvuePage implements OnInit {
+export class PfvuePage {
+  @ViewChild(IonContent) content!: IonContent;
 
-  constructor() { }
+  isContentVisible: { [K in 'content1' | 'content2']: boolean } = {
+    content1: false,
+    content2: false,
+  };
 
-  ngOnInit() {
+  toggleContent(contentKey: 'content1' | 'content2') {
+    this.isContentVisible[contentKey] = !this.isContentVisible[contentKey];
   }
 
+  scrollToTop() {
+    this.content.scrollToTop(500);
+  }
 }

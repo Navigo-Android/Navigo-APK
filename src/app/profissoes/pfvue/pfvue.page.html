@@ -1,13 +1,80 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pfvue</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+    <a href="/artigos/python"
+      ><img src="assets/img/artigo.png" alt="Perfil" class="logo"
+    /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pfvue</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- Conteúdo principal da página -->
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/mapa/map-python"
+      ><img src="assets\img\btn-back.png" alt="Botão Voltar"
+    /></a>
+  </div>
+
+  <div class="tittle-content">
+    <h3>Profissões</h3>
+    <img src="assets/img/vue.png" alt="vue-img" class="icon-js" />
+    <p class="text-intro">Um programador ou desenvolvedor que trabalha com Vue.js utiliza este framework JavaScript para criar interfaces de usuário dinâmicas, responsivas e modernas. Vue.js é amplamente adotado no desenvolvimento front-end por sua simplicidade, flexibilidade e alta performance. É usado tanto para projetos pequenos quanto para aplicações web complexas. </p>
+  </div>
+
+  <ion-item button (click)="toggleContent('content1')"><!--Barra 1-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor Front-End</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content1']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content1']" class="btn-before">
+    <p class="text-info">Especialista na criação de interfaces de usuário, focado em construir experiências responsivas e interativas utilizando Vue.j</p>
+    <p class="salario">Média Salarial: R$3 mil - R$8 mil</p>
+  </div><!--Barra 1-->
+
+  <ion-item button (click)="toggleContent('content2')"><!--Barra 2-->
+    <ion-label>
+      <h2 class="pf-box">Desenvolvedor Full-Stack</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content2']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content2']" class="btn-before">
+    <p class="text-info">Trabalha tanto no front-end (Vue.js) quanto no back-end (Node.js, Laravel, etc.), criando aplicações web completas.</p>
+    <p class="salario">Média Salarial: R$4 mil - R$9 mil</p>
+  </div><!--Barra 2-->
+
+  <div class="btn-top" style="display: flex; justify-content: center; margin-top: 35px;">
+    <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large" style="background-color: #0077b6;"></ion-icon>
+  </div>  
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
