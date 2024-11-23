@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent } from '@ionic/angular';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-home',
@@ -10,26 +12,48 @@ export class HomePage implements OnInit {
   @ViewChild('content', { static: false }) content!: IonContent; // Referência ao ion-content
   favorites: string[] = []; // Lista de favoritos
   items = ['Angular', 'React', 'Vue']; // Lista de itens
+  userId: string | null = null; // ID do usuário autenticado
 
-  constructor() {}
+  constructor(private firestore: AngularFirestore, private afAuth: AngularFireAuth) {}
 
   ngOnInit() {
-    // Carregar favoritos do localStorage
-    const storedFavorites = localStorage.getItem('favorites');
-    if (storedFavorites) {
-      this.favorites = JSON.parse(storedFavorites);
-    }
+    // Obter o ID do usuário autenticado
+    this.afAuth.authState.subscribe((user) => {
+      if (user) {
+        this.userId = user.uid;
+        this.loadFavorites();
+      }
+    });
   }
 
-  // Função que adiciona ou remove dos favoritos
+  loadFavorites() {
+    if (!this.userId) return;
+
+    // Carregar os favoritos do Firestore
+    this.firestore
+      .collection('users')
+      .doc(this.userId)
+      .valueChanges()
+      .subscribe((data: any) => {
+        this.favorites = data?.favorites || [];
+      });
+  }
+
   toggleFavorite(item: string) {
+    if (!this.userId) return;
+
     const index = this.favorites.indexOf(item);
     if (index > -1) {
-      this.favorites.splice(index, 1); // Remove se já estiver nos favoritos
+      this.favorites.splice(index, 1); // Remove o item se já estiver nos favoritos
     } else {
-      this.favorites.push(item); // Adiciona aos favoritos
+      this.favorites.push(item); // Adiciona o item aos favoritos
     }
-    localStorage.setItem('favorites', JSON.stringify(this.favorites)); // Atualiza no localStorage
+
+    // Atualizar no Firestore
+    this.firestore.collection('users').doc(this.userId).set(
+      { favorites: this.favorites },
+      { merge: true }
+    );
   }
 
   isFavorited(item: string): boolean {
