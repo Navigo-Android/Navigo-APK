@@ -9,14 +9,15 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  @ViewChild('content', { static: false }) content!: IonContent;
+  @ViewChild('content', { static: false }) content!: IonContent; // Referência ao ion-content
   favorites: string[] = []; // Lista de favoritos
-  userId: string | null = null; // ID do usuário logado
+  items = ['Angular', 'React', 'Vue']; // Lista de itens
+  userId: string | null = null; // ID do usuário autenticado
 
   constructor(private firestore: AngularFirestore, private afAuth: AngularFireAuth) {}
 
   ngOnInit() {
-    // Obter o ID do usuário logado
+    // Obter o ID do usuário autenticado
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userId = user.uid;
@@ -41,26 +42,25 @@ export class HomePage implements OnInit {
   toggleFavorite(item: string) {
     if (!this.userId) return;
 
-    // Adicionar ou remover dos favoritos
     const index = this.favorites.indexOf(item);
     if (index > -1) {
-      this.favorites.splice(index, 1);
+      this.favorites.splice(index, 1); // Remove o item se já estiver nos favoritos
     } else {
-      this.favorites.push(item);
+      this.favorites.push(item); // Adiciona o item aos favoritos
     }
 
-    // Atualizar os favoritos no Firestore
+    // Atualizar no Firestore
     this.firestore.collection('users').doc(this.userId).set(
       { favorites: this.favorites },
-      { merge: true } // Faz merge com os dados existentes
+      { merge: true }
     );
   }
 
   isFavorited(item: string): boolean {
-    return this.favorites.includes(item);
+    return this.favorites.includes(item); // Verifica se está nos favoritos
   }
 
   scrollToTop() {
-    this.content.scrollToTop(500);
+    this.content.scrollToTop(500); // Rola ao topo com animação
   }
 }
