@@ -1,6 +1,6 @@
 /*Ínicio do Header*/
 ion-header{
-    background-color: #2358b9;
+    background-color: #023e8a;
     border-bottom: 2px #fff solid;
 }
 
@@ -24,7 +24,7 @@ ion-header{
 /*Fim o Header*/
 
 ion-content, ion-item{/*Ínicio do Content*/
-    --background: #90bffc;  /* fallback for old browsers */
+    --background: #0077b6;  /* fallback for old browsers */
 }
 
 ion-content > h1{
@@ -86,6 +86,6 @@ ion-label, h2, ion-icon, .btn-before{
 
   
   ion-footer, ion-toolbar{
-    --background: #2358b9;
+    --background: #023e8a;
     border-top: 1px #fff solid;
   }
