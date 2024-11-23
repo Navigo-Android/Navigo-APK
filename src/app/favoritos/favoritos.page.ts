@@ -8,13 +8,13 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./favoritos.page.scss'],
 })
 export class FavoritosPage implements OnInit {
-  favorites: string[] = [];
-  userId: string | null = null;
+  favorites: string[] = []; // Lista de favoritos
+  userId: string | null = null; // ID do usuário autenticado
 
   constructor(private firestore: AngularFirestore, private afAuth: AngularFireAuth) {}
 
   ngOnInit() {
-    // Obter o ID do usuário logado
+    // Obter o ID do usuário autenticado
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userId = user.uid;
