@@ -1,8 +1,6 @@
 <ion-header>
   <div class="cabecalho">
-    <a href="/home"
-      ><img src="assets/img/logo.png" alt="Logo" class="logo"
-    /></a>
+    <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="logo" /></a>
   </div>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +22,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/java.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Java</ion-card-title></a>
-                <img [src]="isFavorited('Java') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Java')" class="favorito-icon">                
+                <img [src]="isFavorited('Java') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('Java')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -36,8 +34,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/python.png" alt="" class="logo-map">
                 <a href="mapa/map-python"><ion-card-title>Python</ion-card-title></a>
-                <img [src]="isFavorited('Python') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Python')" class="favorito-icon">
+                <img [src]="isFavorited('Python') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Python')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -48,8 +46,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/c.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>C#</ion-card-title></a>
-                <img [src]="isFavorited('C#') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('C#')" class="favorito-icon">
+                <img [src]="isFavorited('C#') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('C#')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -60,8 +58,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/php.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>PHP</ion-card-title></a>
-                <img [src]="isFavorited('PHP') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('PHP')" class="favorito-icon">
+                <img [src]="isFavorited('PHP') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('PHP')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -70,10 +68,10 @@
           <ion-card class="custom-card">
             <ion-card-header>
               <div class="title-icon-container">
-                <img src="assets/img/js.png" alt="" class="logo-map">
-                <a href=""><ion-card-title>Javascript</ion-card-title></a>
-                <img [src]="isFavorited('Javascript') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Javascript')" class="favorito-icon">
+                <img src="assets/img/js.png" alt="Logo" class="logo-map">
+                <a href=""><ion-card-title class="logo-rec">Javascript</ion-card-title></a>
+                <img [src]="isFavorited('Javascript') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Javascript')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -83,8 +81,8 @@
             <ion-card-header>
               <div class="title-icon-container"><img src="assets/img/typescript.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Typescript</ion-card-title></a>
-                <img [src]="isFavorited('Typescript') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Typescript')" class="favorito-icon">
+                <img [src]="isFavorited('Typescript') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Typescript')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -92,7 +90,7 @@
       </div>
     </div>
 
- 
+
     <div class="section">
       <br>
       <h2>Front-End</h2>
@@ -103,8 +101,8 @@
             <ion-card-header>
               <div class="title-icon-container"><img src="assets/img/ionic.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Ionic</ion-card-title></a>
-                <img [src]="isFavorited('Ionic') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Ionic')" class="favorito-icon">
+                <img [src]="isFavorited('Ionic') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('Ionic')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -116,8 +114,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/css.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>CSS</ion-card-title></a>
-                <img [src]="isFavorited('CSS') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('CSS')" class="favorito-icon">
+                <img [src]="isFavorited('CSS') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('CSS')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -137,8 +135,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/react.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>React</ion-card-title></a>
-                <img [src]="isFavorited('React') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('React')" class="favorito-icon">
+                <img [src]="isFavorited('React') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('React')" class="favorito-icon">
               </div>
 
             </ion-card-header>
@@ -149,8 +147,8 @@
             <ion-card-header>
               <div class="title-icon-container"><img src="assets/img/django.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Django</ion-card-title></a>
-                <img [src]="isFavorited('Django') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Django')" class="favorito-icon">
+                <img [src]="isFavorited('Django') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Django')" class="favorito-icon">
               </div>
 
             </ion-card-header>
@@ -161,8 +159,8 @@
             <ion-card-header>
               <div class="title-icon-container"><img src="assets/img/bootstrap.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Bootstrap</ion-card-title></a>
-                <img [src]="isFavorited('Bootstrap') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Bootstrap')" class="favorito-icon">
+                <img [src]="isFavorited('Bootstrap') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Bootstrap')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -172,8 +170,8 @@
             <ion-card-header>
               <div class="title-icon-container"><img src="assets/img/flask.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Flask</ion-card-title></a>
-                <img [src]="isFavorited('Flask') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Flask')" class="favorito-icon">
+                <img [src]="isFavorited('Flask') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('Flask')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -184,8 +182,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/vue.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Vue</ion-card-title></a>
-                <img [src]="isFavorited('Vue') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Vue')" class="favorito-icon">
+                <img [src]="isFavorited('Vue') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('Vue')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -195,8 +193,8 @@
             <ion-card-header>
               <div class="title-icon-container"><img src="assets/img/angular.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Angular</ion-card-title></a>
-                <img [src]="isFavorited('Angular') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Angular')" class="favorito-icon">
+                <img [src]="isFavorited('Angular') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Angular')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -215,8 +213,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/mysql.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>MySQL</ion-card-title></a>
-                <img [src]="isFavorited('MySQL') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('MySQL')" class="favorito-icon">
+                <img [src]="isFavorited('MySQL') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('MySQL')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -227,8 +225,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/oracle.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Oracle</ion-card-title></a>
-                <img [src]="isFavorited('Oracle') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Oracle')" class="favorito-icon">
+                <img [src]="isFavorited('Oracle') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Oracle')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -239,12 +237,12 @@
               <div class="title-icon-container">
                 <img src="assets/img/firebase.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Firebase</ion-card-title></a>
-                <img [src]="isFavorited('Firebase') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Firebase')" class="favorito-icon">
+                <img [src]="isFavorited('Firebase') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Firebase')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
-        </ion-col>        
+        </ion-col>
       </div>
 
 
@@ -257,8 +255,8 @@
               <div class="title-icon-container">
                 <img src="assets/img/ai.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>AI</ion-card-title></a>
-                <img [src]="isFavorited('AI') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('AI')" class="favorito-icon">
+                <img [src]="isFavorited('AI') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela"
+                  (click)="toggleFavorite('AI')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
@@ -269,18 +267,19 @@
               <div class="title-icon-container">
                 <img src="assets/img/cyber-security.png" alt="" class="logo-map">
                 <a href=""><ion-card-title>Security</ion-card-title></a>
-                <img [src]="isFavorited('Security') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'" alt="Estrela" 
-                (click)="toggleFavorite('Security')" class="favorito-icon">
+                <img [src]="isFavorited('Security') ? 'assets/img/favorito.png' : 'assets/img/favoritar.png'"
+                  alt="Estrela" (click)="toggleFavorite('Security')" class="favorito-icon">
               </div>
             </ion-card-header>
           </ion-card>
-        </ion-col>        
+        </ion-col>
       </div>
 
       <div class="btn-top" style="display: flex; justify-content: center; margin-top: 35px;">
-        <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large" style="background-color: #0077b6;"></ion-icon>
+        <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large"
+          style="background-color: #0077b6;"></ion-icon>
       </div>
-  </div>
+    </div>
   </div>
 </ion-content>
 
@@ -289,7 +288,8 @@
   <!-- Barra de ferramentas que contém os botões -->
   <ion-toolbar>
     <!-- Conjunto de botões centralizados -->
-    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+    <ion-buttons
+      style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
       <!-- Primeiro botão com ícone aumentado -->
       <a href="/home">
         <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
@@ -303,5 +303,3 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-      
-          
