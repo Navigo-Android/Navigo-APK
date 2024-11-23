@@ -4,7 +4,7 @@
   </div>
 </ion-header>
 
-<ion-content>
+<ion-content #content>
   <div class="conteudo-meio">
     <div class="section">
       <h2>Favoritos</h2>
@@ -22,6 +22,10 @@
           </ion-card>
         </ion-col>
       </div>
+     <!-- Botão para voltar ao topo -->
+     <div class="btn-top" style="display: flex; justify-content: center; margin-top: 35px;">
+      <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large" style="background-color: #0077b6;"></ion-icon>
+    </div>
     </div>
   </div>
 </ion-content>

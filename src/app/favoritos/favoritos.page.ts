@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
@@ -8,6 +9,8 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./favoritos.page.scss'],
 })
 export class FavoritosPage implements OnInit {
+  @ViewChild('content', { static: false }) content!: IonContent; // Referência ao ion-content
+
   favorites: string[] = []; // Lista de favoritos
   userId: string | null = null; // ID do usuário autenticado
 
@@ -50,5 +53,9 @@ export class FavoritosPage implements OnInit {
         { merge: true }
       );
     }
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(500); 
   }
 }

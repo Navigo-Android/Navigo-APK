@@ -187,3 +187,14 @@ ion-footer, ion-toolbar{
   --background: #023E8A;
   border-top: 1px #fff solid;
 }
+
+
+.btn-top {
+  position: absolute;
+  bottom: 25px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 10; 
+  cursor: pointer;
+}
+

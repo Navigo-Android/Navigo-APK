@@ -1,13 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>map-java</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+    <a href="/profissoes/pfjava"
+      ><img src="assets/img/profissao.png" alt="Perfil" class="user-pf"
+    /></a>
+    <a href="/artigos/java"
+      ><img src="assets/img/artigo.png" alt="Artigos" class="artigos"
+    /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">map-java</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/home"
+      ><img src="assets\img\btn-back.png" alt="Botão Voltar"
+    /></a>
+  </div>
+
+  <h1>Java</h1>
+  <div class="icon-container">
+    <img class="py-icon" src="assets/img/java.png" alt="Python icone">
+  </div>
+
+  <div class="img-map">
+    <img src="assets/img/roudmap_python.png" alt="Mapa Python" (click)="openFullscreen($event)">
+  </div>
+  
+  
+
+  <div class="text">
+    <strong>Python</strong> é uma linguagem de programação de alto nível, interpretada, de propósito geral e conhecida por sua sintaxe clara e legível, o que a torna uma excelente opção tanto para iniciantes quanto para desenvolvedores experientes.<br><br>
+    <strong>Por que Python?</strong><br><br>
+    <strong>Facilidade de Aprendizado:</strong>A sintaxe do Python se assemelha à linguagem natural, tornando o aprendizado mais intuitivo.<br><br>
+    <strong>Versatilidade:</strong>Python pode ser utilizado em uma ampla gama de aplicações, desde desenvolvimento web e análise de dados até inteligência artificial e automação.<br><br>
+    <strong>Grande Comunidade:</strong>Possui uma comunidade ativa e extensa, o que significa que você encontrará muitos recursos, bibliotecas e suporte online.<br><br>
+    <strong>Bibliotecas e Frameworks:</strong>Oferece uma vasta quantidade de bibliotecas e frameworks para diversas tarefas, como NumPy, Pandas, TensorFlow, Django e Flask.
+  </div>
+
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
