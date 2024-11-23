@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PfflashPage } from './pfflash.page';
+import { MapIonicPage } from './map-ionic.page';
 
-describe('PfflashPage', () => {
-  let component: PfflashPage;
-  let fixture: ComponentFixture<PfflashPage>;
+describe('MapIonicPage', () => {
+  let component: MapIonicPage;
+  let fixture: ComponentFixture<MapIonicPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PfflashPage);
+    fixture = TestBed.createComponent(MapIonicPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

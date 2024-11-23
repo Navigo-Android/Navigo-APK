@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FlashPageRoutingModule } from './flash-routing.module';
+import { PfflaskPageRoutingModule } from './pfflask-routing.module';
 
-import { FlashPage } from './flash.page';
+import { PfflaskPage } from './pfflask.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FlashPageRoutingModule
+    PfflaskPageRoutingModule
   ],
-  declarations: [FlashPage]
+  declarations: [PfflaskPage]
 })
-export class FlashPageModule {}
+export class PfflaskPageModule {}

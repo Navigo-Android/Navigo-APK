@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FlashPage } from './flash.page';
+import { IonicPage } from './ionic.page';
 
-describe('FlashPage', () => {
-  let component: FlashPage;
-  let fixture: ComponentFixture<FlashPage>;
+describe('IonicPage', () => {
+  let component: IonicPage;
+  let fixture: ComponentFixture<IonicPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FlashPage);
+    fixture = TestBed.createComponent(IonicPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

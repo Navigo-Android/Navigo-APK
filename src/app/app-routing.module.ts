@@ -109,11 +109,6 @@ const routes: Routes = [
     canActivate: [AuthGuard] 
   },
   {
-    path: 'map-flash',
-    loadChildren: () => import('./mapa/map-flask/map-flash.module').then( m => m.MapFlashPageModule),
-    canActivate: [AuthGuard] 
-  },
-  {
     path: 'map-vue',
     loadChildren: () => import('./mapa/map-vue/map-vue.module').then( m => m.MapVuePageModule),
     canActivate: [AuthGuard] 
@@ -176,11 +171,6 @@ const routes: Routes = [
   {
     path: 'bootstrap',
     loadChildren: () => import('./artigos/bootstrap/bootstrap.module').then( m => m.BootstrapPageModule),
-    canActivate: [AuthGuard] 
-  },
-  {
-    path: 'flash',
-    loadChildren: () => import('./artigos/flash/flash.module').then( m => m.FlashPageModule),
     canActivate: [AuthGuard] 
   },
   {
@@ -264,11 +254,6 @@ const routes: Routes = [
     canActivate: [AuthGuard] 
   },
   {
-    path: 'pfflash',
-    loadChildren: () => import('./profissoes/pfflash/pfflash.module').then( m => m.PfflashPageModule),
-    canActivate: [AuthGuard] 
-  },
-  {
     path: 'pfvue',
     loadChildren: () => import('./profissoes/pfvue/pfvue.module').then( m => m.PfvuePageModule),
     canActivate: [AuthGuard] 
@@ -304,9 +289,39 @@ const routes: Routes = [
     canActivate: [AuthGuard] 
   },
   {
+    path: 'pfflask',
+    loadChildren: () => import('./profissoes/pfflask/pfflask.module').then( m => m.PfflaskPageModule),
+    canActivate: [AuthGuard] 
+  },
+  {
+    path: 'pfionic',
+    loadChildren: () => import('./profissoes/pfionic/pfionic.module').then( m => m.PfionicPageModule),
+    canActivate: [AuthGuard] 
+  },
+  {
+    path: 'map-ionic',
+    loadChildren: () => import('./mapa/map-ionic/map-ionic.module').then( m => m.MapIonicPageModule),
+    canActivate: [AuthGuard] 
+  },
+  {
+    path: 'ionic',
+    loadChildren: () => import('./artigos/ionic/ionic.module').then( m => m.IonicPageModule),
+    canActivate: [AuthGuard] 
+  },
+  {
+    path: 'flask',
+    loadChildren: () => import('./artigos/flask/flask.module').then( m => m.FlaskPageModule),
+    canActivate: [AuthGuard] 
+  },
+  {
+    path: 'map-flask',
+    loadChildren: () => import('./mapa/map-flask/map-flask.module').then( m => m.MapFlaskPageModule),
+    canActivate: [AuthGuard] 
+  },
+  {
     path: '**',
     redirectTo: 'user/login', // Redireciona rotas inválidas para login
-  },
+  }
 ];
 
 @NgModule({

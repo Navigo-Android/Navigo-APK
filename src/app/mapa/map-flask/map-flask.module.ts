@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MapFlashPageRoutingModule } from './map-flash-routing.module';
+import { MapFlaskPageRoutingModule } from './map-flask-routing.module';
 
-import { MapFlashPage } from './map-flash.page';
+import { MapFlaskPage } from './map-flask.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MapFlashPageRoutingModule
+    MapFlaskPageRoutingModule
   ],
-  declarations: [MapFlashPage]
+  declarations: [MapFlaskPage]
 })
-export class MapFlashPageModule {}
+export class MapFlaskPageModule {}

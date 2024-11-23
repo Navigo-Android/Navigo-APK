@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MapFlashPage } from './map-flash.page';
+import { PfflaskPage } from './pfflask.page';
 
-describe('MapFlashPage', () => {
-  let component: MapFlashPage;
-  let fixture: ComponentFixture<MapFlashPage>;
+describe('PfflaskPage', () => {
+  let component: PfflaskPage;
+  let fixture: ComponentFixture<PfflaskPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MapFlashPage);
+    fixture = TestBed.createComponent(PfflaskPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

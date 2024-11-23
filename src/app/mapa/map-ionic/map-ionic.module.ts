@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PfflashPageRoutingModule } from './pfflash-routing.module';
+import { MapIonicPageRoutingModule } from './map-ionic-routing.module';
 
-import { PfflashPage } from './pfflash.page';
+import { MapIonicPage } from './map-ionic.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PfflashPageRoutingModule
+    MapIonicPageRoutingModule
   ],
-  declarations: [PfflashPage]
+  declarations: [MapIonicPage]
 })
-export class PfflashPageModule {}
+export class MapIonicPageModule {}
