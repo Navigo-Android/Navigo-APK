@@ -178,7 +178,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'artigos/Django',
+    path: 'artigos/django',
     loadChildren: () => import('./artigos/django/django.module').then(m => m.DjangoPageModule),
     canActivate: [AuthGuard],
   },
