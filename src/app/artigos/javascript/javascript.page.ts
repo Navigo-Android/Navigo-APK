@@ -30,3 +30,4 @@ export class JavaScriptPage {
     this.content.scrollToTop(500);
   }
 }
+

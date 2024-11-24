@@ -1,13 +1,141 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>angular</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <div class="cabecalho">
+    <a href="/home"
+      ><img src="assets/img/logo.png" alt="Logo" class="logo"
+    /></a>
+    <a href="/profissoes/pfangular"
+      ><img src="assets/img/profissao.png" alt="Perfil" class="user-pf"
+    /></a>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">angular</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- Conteúdo principal da página -->
+<ion-content class="ion-padding">
+  <div class="btn-back" style="max-width: 30px;">
+    <a href="/mapa/map-angular"
+      ><img src="assets\img\btn-back.png" alt="Botão Voltar"
+    /></a>
+  </div>
+
+  <div class="tittle-content">
+    <h3>Angular</h3>
+    <img src="assets/img/angular.png" alt="Angular Icon" class="icon-python" />
+    <p>Aqui temos um guia com documentações oficiais, artigos e vídeos sobre os tópicos abordados no RoadMap!</p>
+  </div>
+
+  <ion-item button (click)="toggleContent('content1')"><!--Barra 1-->
+    <ion-label>
+      <h2>Introdução ao Angular</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content1']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content1']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer"><img src="assets/img/site.png" alt="Site" class="icon-artigos"></a>
+      <a href="https://www.alura.com.br/artigos/angular-js?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=164068847699&hsa_ad=703853156311&hsa_src=g&hsa_tgt=aud-409949667484:dsa-2273097816642&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAl4a6BhBqEiwAqvrqutN14PuvN6KcBivBCcqcU-qHQzl-rB8G8NmBe4BdyocADLE0hc6TdRoCjz4QAvD_BwE" target="_blank" rel="noopener noreferrer"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.youtube.com/watch?v=Yf0rC7dERjg" target="_blank" rel="noopener noreferrer"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 1-->
+
+  <ion-item button (click)="toggleContent('content2')"><!--Barra 2-->
+    <ion-label>
+      <h2>Comunicação com APIs</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content2']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content2']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://angular.dev/api" target="_blank"><img src="assets/img/site.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.dio.me/articles/exemplo-basico-de-como-consumir-api-no-angular" target="_blank"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.youtube.com/watch?v=kNDZIVBdbn4" target="_blank"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 2-->
+
+  <ion-item button (click)="toggleContent('content3')"><!--Barra 3-->
+    <ion-label>
+      <h2>Rotas e navegações</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content3']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content3']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://www.alura.com.br/artigos/guarda-de-rotas-funcional-angular?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=164068847699&hsa_ad=703853156311&hsa_src=g&hsa_tgt=aud-527303763294:dsa-2273097816642&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAl4a6BhBqEiwAqvrquh8UbLjYcQkKCzlHsJj3GymMan7_Xmi-WIAmR0BvoW4SWP4lOTVkMRoCCHEQAvD_BwE" target="_blank"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.youtube.com/watch?v=Va_bf8FbfXo" target="_blank"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 3-->
+
+  <ion-item button (click)="toggleContent('content4')"><!--Barra 4-->
+    <ion-label>
+      <h2>Criação de bibliotecas</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content4']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content4']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://dev.to/klauskpm/como-criar-uma-biblioteca-de-componentes-com-angular-e-storybook-420p" target="_blank"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.youtube.com/watch?v=5zgrL9XGASM" target="_blank"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 4-->
+
+  <ion-item button (click)="toggleContent('content5')"><!--Barra 5-->
+    <ion-label>
+      <h2>Angular Universal (SSR)</h2>
+    </ion-label>
+    <ion-icon
+      slot="end"
+      name="chevron-down"
+      [ngClass]="{'chevron-up': isContentVisible['content5']}"
+    ></ion-icon>
+  </ion-item>
+  <div *ngIf="isContentVisible['content5']" class="btn-before">
+    <div class="justify-icon">
+      <a href="https://medium.com/@arturquirino/angular-universal-renderizando-sua-aplica%C3%A7%C3%A3o-no-servidor-f9ac617237d2" target="_blank"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.youtube.com/watch?v=4KH-TStaiGw" target="_blank"><img src="assets/img/youtube.png" alt="Youtube" class="icon-artigos"></a>
+    </div>
+  </div><!--Barra 5-->
+
+ 
+
+ 
+
+    <div class="btn-top" style="display: flex; justify-content: center; margin-top: 35px;">
+        <ion-icon (click)="scrollToTop()" name="arrow-up-circle-outline" size="large" style="background-color: #0077b6;"></ion-icon>
+    </div>
 </ion-content>
+
+<!-- Rodapé da página -->
+<ion-footer>
+  <!-- Barra de ferramentas que contém os botões -->
+  <ion-toolbar>
+    <!-- Conjunto de botões centralizados -->
+    <ion-buttons style="display: flex; justify-content: center; justify-content: space-between; margin-left: 45px; margin-right: 45px;">
+      <!-- Primeiro botão com ícone aumentado -->
+      <a href="/home">
+        <ion-icon name="home-outline" class="icon-tabs" style="color: #fff;"></ion-icon>
+      </a>
+      <a href="/favoritos">
+        <img src="assets/img/favorito.png" alt="">
+      </a>
+      <a href="/profile">
+        <img src="assets/img/perfil-menu.png" alt="">
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+

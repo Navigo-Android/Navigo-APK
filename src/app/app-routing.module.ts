@@ -168,12 +168,17 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'artigos/php',
+    loadChildren: () => import('./artigos/php/php.module').then(m => m.PhpPageModule),
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'artigos/react',
     loadChildren: () => import('./artigos/react/react.module').then(m => m.ReactPageModule),
     canActivate: [AuthGuard],
   },
   {
-    path: 'artigos/django',
+    path: 'artigos/Django',
     loadChildren: () => import('./artigos/django/django.module').then(m => m.DjangoPageModule),
     canActivate: [AuthGuard],
   },
@@ -317,6 +322,11 @@ const routes: Routes = [
     loadChildren: () => import('./profissoes/pfsecurity/pfsecurity.module').then(m => m.PfsecurityPageModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'php',
+    loadChildren: () => import('./artigos/php/php.module').then( m => m.PhpPageModule)
+  },
+
 ];
 
 @NgModule({

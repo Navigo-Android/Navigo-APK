@@ -3,7 +3,7 @@
     <a href="/home"
       ><img src="assets/img/logo.png" alt="Logo" class="logo"
     /></a>
-    <a href="/profissoes/pfjavascript"
+    <a href="/profissoes/pfphp"
       ><img src="assets/img/profissao.png" alt="Perfil" class="user-pf"
     /></a>
   </div>
@@ -12,20 +12,20 @@
 <!-- Conteúdo principal da página -->
 <ion-content class="ion-padding">
   <div class="btn-back" style="max-width: 30px;">
-    <a href="/mapa/map-js"
+    <a href="/mapa/map-php"
       ><img src="assets\img\btn-back.png" alt="Botão Voltar"
     /></a>
   </div>
 
   <div class="tittle-content">
-    <h3>Javascript</h3>
-    <img src="assets/img/js.png" alt="AI" class="icon-python" />
+    <h3>PHP</h3>
+    <img src="assets/img/php.png" alt="AI" class="icon-python" />
     <p>Aqui temos um guia com documentações oficiais, artigos e vídeos sobre os tópicos abordados no RoadMap!</p>
   </div>
 
   <ion-item button (click)="toggleContent('content1')"><!--Barra 1-->
     <ion-label>
-      <h2>Fundamentos do JavaScript</h2>
+      <h2>Introdução ao Bootstrap </h2>
     </ion-label>
     <ion-icon
       slot="end"
@@ -35,10 +35,9 @@
   </ion-item>
   <div *ngIf="isContentVisible['content1']" class="btn-before">
     <div class="justify-icon">
-      <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer"><img src="assets/img/site.png" alt="Artigo" class="icon-artigos"></a>
-      <a href="https://diegomariano.com/fundamentos-do-javascript/" target="_blank" rel="noopener noreferrer"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.devmedia.com.br/guia/bootstrap/38150" target="_blank" rel="noopener noreferrer"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
 
-      <a href="https://www.youtube.com/watch?v=Ma1BYvUCUk0" target="_blank" rel="noopener noreferrer"><img src="assets/img/youtube.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="https://www.youtube.com/watch?v=SmQMZ36hJJY&list=PLnDvRpP8Bnexu5wvxogy6N49_S5Xk8Cze" target="_blank" rel="noopener noreferrer"><img src="assets/img/youtube.png" alt="Artigo" class="icon-artigos"></a>
 
       
      
@@ -47,7 +46,7 @@
 
   <ion-item button (click)="toggleContent('content2')"><!--Barra 2-->
     <ion-label>
-      <h2>Manipulação do Dom</h2>
+      <h2>Responsividade Bootstrap</h2>
     </ion-label>
     <ion-icon
       slot="end"
@@ -58,7 +57,7 @@
   <div *ngIf="isContentVisible['content2']" class="btn-before">
     <div class="justify-icon">
 
-      <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction" target="_blank"><img src="assets/img/site.png" alt="Artigo" class="icon-artigos"></a>
+      <a href="hhttps://getbootstrap.com.br/docs/3.3/css/" target="_blank"><img src="assets/img/site.png" alt="Artigo" class="icon-artigos"></a>
       <a href="https://pt.stackoverflow.com/questions/368491/layout-responsivo-bootstrap" target="_blank"><img src="assets/img/artigo.png" alt="Artigo" class="icon-artigos"></a>
       <a href="https://www.youtube.com/watch?v=8sa0iCnCEk0" target="_blank"><img src="assets/img/youtube.png" alt="Artigo" class="icon-artigos"></a>
     </div>

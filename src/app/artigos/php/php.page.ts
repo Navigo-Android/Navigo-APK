@@ -2,11 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { IonContent } from '@ionic/angular';
 
 @Component({
-  selector: 'app-security',
-  templateUrl: './security.page.html',
-  styleUrls: ['./security.page.scss'],
+  selector: 'app-php',
+  templateUrl: './php.page.html',
+  styleUrls: ['./php.page.scss'],
 })
-export class SecurityPage  {
+export class PhpPage {
   @ViewChild(IonContent) content!: IonContent;
 
   isContentVisible: { [K in 'content1' | 'content2' | 'content3' | 'content4' | 'content5' | 'content6' | 'content7' | 'content8' | 'content9' | 'content10']: boolean } = {
