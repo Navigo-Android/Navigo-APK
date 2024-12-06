@@ -54,8 +54,4 @@ export class FavoritosPage implements OnInit {
       );
     }
   }
-
-  scrollToTop() {
-    this.content.scrollToTop(500); 
-  }
 }
